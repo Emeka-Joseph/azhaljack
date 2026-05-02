@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+{% block title %}FAQ — Azhaljack Logistic Services Kuwait{% endblock %}
+
+{% block content %}
+
+<div class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ url_for('userroutes.index') }}">Home</a></li>
+      <li class="breadcrumb-item active">FAQ</li>
+    </ol></nav>
+    <div class="section-badge">Got Questions?</div>
+    <h1 class="page-hero-title">Frequently Asked<br><span class="gold-text">Questions</span></h1>
+    <p class="page-hero-sub">Everything you need to know about Azhaljack Logistic Services — answered clearly and honestly.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-8">
+
+        <!-- General -->
+        <div class="faq-cat-badge">General</div>
+        <div class="accordion faq-accordion mb-5" id="faqGeneral">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#g1">
+                What areas does Azhaljack deliver to in Kuwait?
+              </button>
+            </h2>
+            <div id="g1" class="accordion-collapse collapse show" data-bs-parent="#faqGeneral">
+              <div class="accordion-body">
+                Azhaljack Logistic Services delivers across all six governorates of the State of Kuwait: Capital (Kuwait City), Hawalli, Farwaniya, Ahmadi, Jahra, and Mubarak Al-Kabeer. We cover every neighbourhood, district, and area — no location is too remote for us.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g2">
+                What makes Azhaljack different from other delivery companies in Kuwait?
+              </button>
+            </h2>
+            <div id="g2" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+              <div class="accordion-body">
+                Three things set us apart: speed (we consistently deliver faster than any competitor), reliability (99% on-time rate backed by real data), and service quality (a customer support team that actually picks up the phone). We also invest heavily in technology — our real-time tracking system is the most advanced in Kuwait. In short, we are not just the best by our own assessment — our clients tell us so, every day.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g3">
+                Does Azhaljack handle both B2B and B2C deliveries?
+              </button>
+            </h2>
+            <div id="g3" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+              <div class="accordion-body">
+                Absolutely. We serve both business-to-business (B2B) and business-to-consumer (B2C) clients. Whether you are sending a pallet of goods to a corporate client or a single parcel to an individual customer's home — Azhaljack handles it with equal precision and care.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g4">
+                What are your operating hours?
+              </button>
+            </h2>
+            <div id="g4" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+              <div class="accordion-body">
+                Our standard operating hours are Saturday to Thursday, 7:00 AM to 10:00 PM. Our express courier service is available until 11:00 PM. Our customer support line and online tracking system are active during all operating hours. We observe Kuwait national holidays.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delivery -->
+        <div class="faq-cat-badge">Delivery & Tracking</div>
+        <div class="accordion faq-accordion mb-5" id="faqDelivery">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#d1">
+                How does same-day delivery work?
+              </button>
+            </h2>
+            <div id="d1" class="accordion-collapse collapse show" data-bs-parent="#faqDelivery">
+              <div class="accordion-body">
+                Place your order (or have your business submit the shipment request) before 1:00 PM, and we guarantee delivery by 9:00 PM the same day. Our system dispatches the nearest available courier, and you receive a live tracking link the moment pickup is confirmed. Simple, fast, and reliable.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#d2">
+                Can I track my delivery in real time?
+              </button>
+            </h2>
+            <div id="d2" class="accordion-collapse collapse" data-bs-parent="#faqDelivery">
+              <div class="accordion-body">
+                Yes. Every Azhaljack shipment comes with a unique tracking link that shows the live GPS location of your courier, estimated arrival time, and delivery status — from pickup to doorstep. You can share this link with your customers directly so they are always informed.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#d3">
+                What happens if a delivery attempt fails?
+              </button>
+            </h2>
+            <div id="d3" class="accordion-collapse collapse" data-bs-parent="#faqDelivery">
+              <div class="accordion-body">
+                If the recipient is unavailable, our courier will attempt to contact them directly. A second delivery attempt is made the following day at no extra charge. If two attempts fail, the package is returned to you with a full incident report. We work hard to ensure successful first-attempt delivery rates — currently at 96.3%.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#d4">
+                Do you offer proof of delivery?
+              </button>
+            </h2>
+            <div id="d4" class="accordion-collapse collapse" data-bs-parent="#faqDelivery">
+              <div class="accordion-body">
+                Yes. All Azhaljack deliveries include electronic proof of delivery (ePOD) — comprising a digital timestamp, recipient signature, and delivery photo. This is automatically stored in your business dashboard and can be downloaded anytime for dispute resolution or auditing.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing & COD -->
+        <div class="faq-cat-badge">Pricing & Payments</div>
+        <div class="accordion faq-accordion mb-5" id="faqPricing">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#p1">
+                Do you support Cash on Delivery (COD)?
+              </button>
+            </h2>
+            <div id="p1" class="accordion-collapse collapse show" data-bs-parent="#faqPricing">
+              <div class="accordion-body">
+                Yes — COD is fully supported and is one of our most-used features. We collect cash on your behalf and transfer the funds directly to your registered bank account the following business day. Our COD collection rate is among the highest in Kuwait at 94.8%.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p2">
+                How is pricing determined?
+              </button>
+            </h2>
+            <div id="p2" class="accordion-collapse collapse" data-bs-parent="#faqPricing">
+              <div class="accordion-body">
+                Pricing is based on package dimensions, weight, delivery type (standard, same-day, or express), and volume. Business clients benefit from volume-based discounted rates. Contact our sales team for a tailored quote — we are committed to offering the most competitive pricing for premium service in Kuwait.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p3">
+                Are there setup fees for business accounts?
+              </button>
+            </h2>
+            <div id="p3" class="accordion-collapse collapse" data-bs-parent="#faqPricing">
+              <div class="accordion-body">
+                No setup fees. Creating a business account with Azhaljack is completely free. You only pay for the deliveries you make. For corporate and high-volume clients, we offer dedicated account management, custom dashboards, and API access at no additional cost.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integration -->
+        <div class="faq-cat-badge">Technology & Integration</div>
+        <div class="accordion faq-accordion" id="faqTech">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#t1">
+                Can I integrate Azhaljack with my online store?
+              </button>
+            </h2>
+            <div id="t1" class="accordion-collapse collapse show" data-bs-parent="#faqTech">
+              <div class="accordion-body">
+                Yes. We offer native integrations with Shopify, WooCommerce, Salla, Zid, and a full REST API for custom systems. Once integrated, your orders are automatically synced, shipments are created, and tracking updates are pushed back to your store in real time. Our developer documentation is comprehensive and our tech support team is on hand to assist.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t2">
+                Is there a business dashboard available?
+              </button>
+            </h2>
+            <div id="t2" class="accordion-collapse collapse" data-bs-parent="#faqTech">
+              <div class="accordion-body">
+                Every business account includes a full-featured web dashboard where you can manage shipments, view live tracking, download ePODs, analyse delivery performance data, manage COD settlements, and generate reports. Access from any device, anytime.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t3">
+                How secure is my data with Azhaljack?
+              </button>
+            </h2>
+            <div id="t3" class="accordion-collapse collapse" data-bs-parent="#faqTech">
+              <div class="accordion-body">
+                Data security is a core priority. All client data is encrypted in transit and at rest. We do not share any client or recipient data with third parties. Our systems comply with applicable Kuwaiti data protection regulations and are audited regularly for security vulnerabilities.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4 reveal-r">
+        <div class="contact-info-card sticky-top" style="top:100px;">
+          <div class="section-badge mb-3">Still Have Questions?</div>
+          <h4 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:.75rem;">We're here to help.</h4>
+          <p style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-bottom:2rem;">Our support team responds within 2 business hours. Reach us through any of the channels below.</p>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><i class="bi bi-telephone-fill"></i></div>
+            <div>
+              <div class="cinfo-label">Call Us</div>
+              <div class="cinfo-value">+965 XXXX XXXX</div>
+            </div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><i class="bi bi-whatsapp"></i></div>
+            <div>
+              <div class="cinfo-label">WhatsApp</div>
+              <div class="cinfo-value">+965 XXXX XXXX</div>
+            </div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><i class="bi bi-envelope-fill"></i></div>
+            <div>
+              <div class="cinfo-label">Email</div>
+              <div class="cinfo-value">support@azhaljack.com.kw</div>
+            </div>
+          </div>
+          <a href="{{ url_for('userroutes.contact') }}" class="btn-gold w-100 text-center d-block mt-2">Send a Message</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="container text-center">
+    <h2 class="cta-title">Ready to Experience Kuwait's Best Delivery?</h2>
+    <p class="cta-sub mb-4">Sign up as a business client today — free account, no commitments, and your first delivery in under an hour.</p>
+    <a href="{{ url_for('userroutes.contact') }}" class="btn-dark">Open a Business Account</a>
+  </div>
+</div>
+
+{% endblock %}

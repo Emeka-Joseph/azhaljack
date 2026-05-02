@@ -1,0 +1,508 @@
+{% extends 'base.html' %}
+{% block title %}Azhaljack Logistic Services — Kuwait's #1 Delivery Company{% endblock %}
+
+{% block content %}
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-bg-gradient"></div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 hero-content">
+        <div class="hero-badge"><span class="dot"></span>Kuwait's Premier Logistics Partner</div>
+        <h1 class="hero-title">
+          Delivering <span class="highlight">Excellence</span><br>
+          Across Every Corner<br>of Kuwait
+        </h1>
+        <p class="hero-subtitle">From bustling Kuwait City souqs to quiet residential streets — Azhaljack Logistic Services reaches every door, every time. The State of Kuwait's most trusted consumer delivery company.</p>
+        <div class="hero-btns">
+          <a href="{{ url_for('userroutes.services') }}" class="btn-gold">Explore Our Services</a>
+          <a href="{{ url_for('userroutes.contact') }}" class="btn-outline-gold on-dark">Get a Quote</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span data-count="50000" data-sfx="+">0+</span></div>
+            <div class="hero-stat-label">Deliveries Monthly</div>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span data-count="99" data-sfx="%">0%</span></div>
+            <div class="hero-stat-label">On-Time Rate</div>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span data-count="6" data-sfx="">0</span></div>
+            <div class="hero-stat-label">Governorates Covered</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 hero-visual d-flex justify-content-center justify-content-lg-end mt-5 mt-lg-0">
+        <div class="position-relative">
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <span class="hero-card-title">Live Delivery Tracker</span>
+              <span class="live-badge">● LIVE</span>
+            </div>
+            <div class="route-block">
+              <div class="route-row"><div class="rdot s"></div><div><div class="rtxt">Salmiya Warehouse</div><div class="rsub">Origin · Kuwait City</div></div></div>
+              <div class="route-row"><div class="rline"></div></div>
+              <div class="route-row"><div class="rdot m"></div><div><div class="rtxt">In Transit — Hawalli</div><div class="rsub">ETA: 22 minutes</div></div></div>
+              <div class="route-row"><div class="rline"></div></div>
+              <div class="route-row"><div class="rdot e"></div><div><div class="rtxt">Customer — Jabriya</div><div class="rsub">Destination confirmed</div></div></div>
+            </div>
+            <div class="d-grid-3">
+              <div class="d-mini"><div class="d-mini-num">247</div><div class="d-mini-label">Active Today</div></div>
+              <div class="d-mini"><div class="d-mini-num">18m</div><div class="d-mini-label">Avg. Delivery</div></div>
+              <div class="d-mini"><div class="d-mini-num">100%</div><div class="d-mini-label">Coverage</div></div>
+            </div>
+          </div>
+          <div class="float-chip tl">
+            <div class="chip-icon"><i class="bi bi-shield-check-fill"></i></div>
+            <div><div class="chip-txt">Fully Insured</div><div class="chip-sub">Every Shipment</div></div>
+          </div>
+          <div class="float-chip br">
+            <div class="chip-icon"><i class="bi bi-star-fill"></i></div>
+            <div><div class="chip-txt">4.9 / 5.0 Rating</div><div class="chip-sub">12,400+ Reviews</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS STRIP ══ -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="row g-4 align-items-center text-center">
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="50000" data-sfx="+">0</span></div><div class="stat-lbl">Monthly Deliveries</div></div>
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="5000" data-sfx="+">0</span></div><div class="stat-lbl">Happy Clients</div></div>
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="6" data-sfx="">0</span></div><div class="stat-lbl">Governorates</div></div>
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="99" data-sfx="%">0</span></div><div class="stat-lbl">On-Time Delivery</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ OPERATIONS SHOWCASE ══ -->
+<section class="bg-dark-alt">
+  <div class="container">
+    <div class="section-center mb-5 reveal">
+      <div class="section-badge">Behind Every Delivery</div>
+      <h2 class="section-title">World-Class Operations,<br><span class="gold-text">Built for Kuwait</span></h2>
+      <p class="section-subtitle">Our infrastructure — from fleet to fulfillment technology — is engineered to set an impossible standard for competitors to match.</p>
+    </div>
+    <div class="row g-4">
+      <!-- Card 1: Fleet -->
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="img-card" style="background:linear-gradient(145deg,#0F2D54,#1A3A6B);">
+          <div class="img-card-inner">
+            <div class="img-pattern"></div>
+            <svg viewBox="0 0 280 180" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
+              <rect x="0" y="148" width="280" height="32" fill="rgba(255,255,255,.04)"/>
+              <line x1="25" y1="163" x2="60" y2="163" stroke="rgba(201,168,76,.25)" stroke-width="2" stroke-dasharray="18 12"/>
+              <line x1="100" y1="163" x2="135" y2="163" stroke="rgba(201,168,76,.25)" stroke-width="2" stroke-dasharray="18 12"/>
+              <line x1="175" y1="163" x2="210" y2="163" stroke="rgba(201,168,76,.25)" stroke-width="2" stroke-dasharray="18 12"/>
+              <rect x="20" y="82" width="158" height="65" rx="6" fill="rgba(26,58,107,.9)" stroke="rgba(201,168,76,.4)" stroke-width="1.5"/>
+              <path d="M178 102 L218 102 L232 120 L232 148 L178 148 Z" fill="rgba(15,45,84,.95)" stroke="rgba(201,168,76,.3)" stroke-width="1.5"/>
+              <path d="M183 106 L213 106 L222 118 L222 135 L183 135 Z" fill="rgba(201,168,76,.12)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+              <circle cx="230" cy="138" r="4" fill="rgba(201,168,76,.6)"/>
+              <circle cx="230" cy="138" r="7" fill="rgba(201,168,76,.08)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <text x="32" y="111" font-family="serif" font-weight="900" font-size="12" fill="white">AZHALJACK</text>
+              <text x="40" y="125" font-family="sans-serif" font-size="7" fill="rgba(201,168,76,.9)" letter-spacing="2">LOGISTICS · KUWAIT</text>
+              <rect x="20" y="132" width="158" height="4" fill="rgba(201,168,76,.5)"/>
+              <circle cx="62" cy="152" r="16" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.5)" stroke-width="2"/>
+              <circle cx="62" cy="152" r="8" fill="rgba(201,168,76,.35)"/>
+              <circle cx="62" cy="152" r="4" fill="rgba(201,168,76,.8)"/>
+              <circle cx="140" cy="152" r="16" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.5)" stroke-width="2"/>
+              <circle cx="140" cy="152" r="8" fill="rgba(201,168,76,.35)"/>
+              <circle cx="140" cy="152" r="4" fill="rgba(201,168,76,.8)"/>
+              <circle cx="208" cy="152" r="13" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.5)" stroke-width="2"/>
+              <circle cx="208" cy="152" r="6" fill="rgba(201,168,76,.35)"/>
+              <line x1="0" y1="102" x2="14" y2="102" stroke="rgba(201,168,76,.4)" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="0" y1="113" x2="17" y2="113" stroke="rgba(201,168,76,.2)" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="0" y1="92" x2="11" y2="92" stroke="rgba(201,168,76,.15)" stroke-width="1" stroke-linecap="round"/>
+              <circle cx="188" cy="52" r="4" fill="rgba(201,168,76,.0)"><animate attributeName="r" values="4;14;4" dur="2s" repeatCount="indefinite"/><animate attributeName="fill" values="rgba(201,168,76,.4);rgba(201,168,76,0);rgba(201,168,76,.4)" dur="2s" repeatCount="indefinite"/></circle>
+              <circle cx="188" cy="52" r="4" fill="rgba(201,168,76,.85)"/>
+              <line x1="188" y1="52" x2="188" y2="68" stroke="rgba(201,168,76,.5)" stroke-width="1.5" stroke-dasharray="3 2"/>
+            </svg>
+          </div>
+          <div class="img-card-overlay">
+            <div class="img-card-badge">Our Fleet</div>
+            <div class="img-card-title">200+ Branded Vehicles</div>
+            <div class="img-card-sub">GPS-tracked, insured, Kuwait-wide</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Warehouse -->
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="img-card" style="background:linear-gradient(145deg,#1A3A6B,#0F2D54);">
+          <div class="img-card-inner">
+            <div class="img-pattern"></div>
+            <svg viewBox="0 0 280 180" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
+              <rect x="10" y="35" width="260" height="130" rx="4" fill="rgba(10,22,40,.5)"/>
+              <line x1="10" y1="45" x2="270" y2="45" stroke="rgba(201,168,76,.1)" stroke-width="1"/>
+              <!-- Shelf 1 -->
+              <rect x="18" y="48" width="2" height="100" fill="rgba(201,168,76,.35)"/>
+              <rect x="88" y="48" width="2" height="100" fill="rgba(201,168,76,.35)"/>
+              <rect x="18" y="62" width="72" height="3" rx="1" fill="rgba(201,168,76,.45)"/>
+              <rect x="18" y="90" width="72" height="3" rx="1" fill="rgba(201,168,76,.45)"/>
+              <rect x="18" y="118" width="72" height="3" rx="1" fill="rgba(201,168,76,.45)"/>
+              <rect x="22" y="48" width="18" height="14" rx="2" fill="rgba(26,58,107,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+              <rect x="44" y="51" width="22" height="11" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.25)" stroke-width="1"/>
+              <rect x="70" y="48" width="14" height="14" rx="2" fill="rgba(26,58,107,.8)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <rect x="22" y="66" width="25" height="19" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+              <rect x="51" y="70" width="16" height="15" rx="2" fill="rgba(26,58,107,.85)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <rect x="71" y="66" width="13" height="19" rx="2" fill="rgba(15,45,84,.75)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <rect x="25" y="94" width="20" height="18" rx="2" fill="rgba(26,58,107,.9)" stroke="rgba(201,168,76,.25)" stroke-width="1"/>
+              <rect x="50" y="97" width="18" height="14" rx="2" fill="rgba(15,45,84,.85)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <!-- Shelf 2 -->
+              <rect x="96" y="48" width="2" height="100" fill="rgba(201,168,76,.35)"/>
+              <rect x="176" y="48" width="2" height="100" fill="rgba(201,168,76,.35)"/>
+              <rect x="96" y="62" width="82" height="3" rx="1" fill="rgba(201,168,76,.45)"/>
+              <rect x="96" y="90" width="82" height="3" rx="1" fill="rgba(201,168,76,.45)"/>
+              <rect x="96" y="118" width="82" height="3" rx="1" fill="rgba(201,168,76,.45)"/>
+              <rect x="100" y="48" width="24" height="14" rx="2" fill="rgba(26,58,107,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+              <rect x="128" y="52" width="18" height="10" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <rect x="150" y="48" width="22" height="14" rx="2" fill="rgba(26,58,107,.8)" stroke="rgba(201,168,76,.25)" stroke-width="1"/>
+              <rect x="100" y="66" width="20" height="19" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+              <rect x="124" y="69" width="28" height="16" rx="2" fill="rgba(26,58,107,.85)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <rect x="156" y="66" width="16" height="19" rx="2" fill="rgba(15,45,84,.8)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <!-- Shelf 3 -->
+              <rect x="184" y="48" width="2" height="100" fill="rgba(201,168,76,.35)"/>
+              <rect x="262" y="48" width="2" height="100" fill="rgba(201,168,76,.35)"/>
+              <rect x="184" y="62" width="80" height="3" rx="1" fill="rgba(201,168,76,.45)"/>
+              <rect x="184" y="90" width="80" height="3" rx="1" fill="rgba(201,168,76,.45)"/>
+              <rect x="188" y="48" width="20" height="14" rx="2" fill="rgba(26,58,107,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+              <rect x="212" y="51" width="26" height="11" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <rect x="242" y="48" width="16" height="14" rx="2" fill="rgba(26,58,107,.8)" stroke="rgba(201,168,76,.25)" stroke-width="1"/>
+              <rect x="188" y="66" width="28" height="19" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+              <rect x="220" y="70" width="18" height="15" rx="2" fill="rgba(26,58,107,.85)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <rect x="242" y="66" width="16" height="19" rx="2" fill="rgba(15,45,84,.75)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <!-- Forklift -->
+              <rect x="105" y="122" width="45" height="28" rx="3" fill="rgba(201,168,76,.65)"/>
+              <rect x="103" y="120" width="5" height="30" fill="rgba(201,168,76,.5)"/>
+              <rect x="103" y="120" width="28" height="3" fill="rgba(201,168,76,.8)"/>
+              <circle cx="112" cy="153" r="8" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.6)" stroke-width="1.5"/>
+              <circle cx="142" cy="153" r="8" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.6)" stroke-width="1.5"/>
+              <!-- Ceiling light -->
+              <line x1="140" y1="10" x2="140" y2="35" stroke="rgba(201,168,76,.2)" stroke-width="1" stroke-dasharray="3 2"/>
+              <ellipse cx="140" cy="36" rx="22" ry="7" fill="rgba(201,168,76,.08)"/>
+              <circle cx="140" cy="35" r="4" fill="rgba(201,168,76,.45)"/>
+            </svg>
+          </div>
+          <div class="img-card-overlay">
+            <div class="img-card-badge">Fulfillment Center</div>
+            <div class="img-card-title">State-of-the-Art Warehouse</div>
+            <div class="img-card-sub">Secure, climate-controlled, Kuwait City</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Technology -->
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="img-card" style="background:linear-gradient(145deg,#0A1628,#1A3A6B);">
+          <div class="img-card-inner">
+            <div class="img-pattern"></div>
+            <svg viewBox="0 0 280 180" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
+              <ellipse cx="85" cy="100" rx="40" ry="55" fill="rgba(29,78,216,.08)"/>
+              <ellipse cx="200" cy="100" rx="40" ry="55" fill="rgba(201,168,76,.05)"/>
+              <rect x="95" y="12" width="90" height="160" rx="16" fill="rgba(26,58,107,.7)" stroke="rgba(201,168,76,.4)" stroke-width="2"/>
+              <rect x="100" y="22" width="80" height="135" rx="10" fill="rgba(8,18,36,.85)"/>
+              <rect x="120" y="16" width="28" height="4" rx="2" fill="rgba(201,168,76,.3)"/>
+              <circle cx="160" cy="18" r="3" fill="rgba(201,168,76,.4)"/>
+              <!-- Map screen -->
+              <rect x="100" y="22" width="80" height="85" rx="10" fill="rgba(13,27,52,.9)"/>
+              <path d="M112 62 L140 46 L164 64 L156 84 L130 90 L115 74 Z" fill="rgba(26,58,107,.55)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+              <path d="M120 74 L136 54 L158 68" stroke="rgba(201,168,76,.85)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="120" cy="74" r="4" fill="rgba(201,168,76,.9)"/>
+              <circle cx="158" cy="68" r="4" fill="#4ECDC4"/>
+              <circle cx="158" cy="68" r="9" fill="rgba(78,205,196,.0)" stroke="rgba(78,205,196,.4)" stroke-width="1"><animate attributeName="r" values="5;14;5" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/></circle>
+              <circle cx="136" cy="54" r="3" fill="rgba(255,255,255,.7)"/>
+              <!-- Status panel -->
+              <rect x="105" y="115" width="70" height="38" rx="7" fill="rgba(26,58,107,.8)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+              <text x="113" y="127" font-family="sans-serif" font-size="5.5" fill="rgba(201,168,76,.85)" letter-spacing="1">● TRACKING LIVE</text>
+              <text x="113" y="138" font-family="serif" font-size="8.5" font-weight="bold" fill="white">Order #AJ-2847</text>
+              <text x="113" y="148" font-family="sans-serif" font-size="6" fill="rgba(255,255,255,.55)">ETA: 12 minutes</text>
+              <rect x="105" y="158" width="70" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+              <rect x="105" y="158" width="48" height="3" rx="1.5" fill="rgba(201,168,76,.65)"/>
+            </svg>
+          </div>
+          <div class="img-card-overlay">
+            <div class="img-card-badge">Smart Technology</div>
+            <div class="img-card-title">Live GPS Tracking Platform</div>
+            <div class="img-card-sub">Real-time visibility, every shipment</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="bg-white">
+  <div class="container">
+    <div class="section-center mb-5 reveal">
+      <div class="section-badge">Our Process</div>
+      <h2 class="section-title">Delivery in <span class="gold-text">4 Simple Steps</span></h2>
+      <p class="section-subtitle">From the moment you request a pickup to the second your customer signs for it — every step is tracked, optimised, and guaranteed.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-lg-3 process-step reveal">
+        <div class="step-icon"><i class="bi bi-phone-fill"></i><div class="step-num">1</div></div>
+        <div class="step-title">Book Online</div>
+        <p class="step-text">Place your order in seconds via our app, website, or API. Instant confirmation, zero paperwork.</p>
+      </div>
+      <div class="col-6 col-lg-3 process-step reveal">
+        <div class="step-icon"><i class="bi bi-box-seam-fill"></i><div class="step-num">2</div></div>
+        <div class="step-title">We Collect</div>
+        <p class="step-text">A dedicated courier arrives at your location within 30 minutes of your request. Your item is packaged and logged.</p>
+      </div>
+      <div class="col-6 col-lg-3 process-step reveal">
+        <div class="step-icon"><i class="bi bi-truck-front-fill"></i><div class="step-num">3</div></div>
+        <div class="step-title">In Transit</div>
+        <p class="step-text">Live GPS tracking activates. Your customer receives real-time updates. Our route algorithms ensure the fastest path.</p>
+      </div>
+      <div class="col-6 col-lg-3 process-step reveal">
+        <div class="step-icon"><i class="bi bi-check-circle-fill"></i><div class="step-num">4</div></div>
+        <div class="step-title">Delivered</div>
+        <p class="step-text">Signature, photo, and ePOD sent instantly. COD collected and settled next business day. Mission complete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT PREVIEW ══ -->
+<section class="bg-dark-alt">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5 about-img-wrap reveal-l">
+        <div class="about-img-box">
+          <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;opacity:.85;">
+            <!-- Kuwait stylized map -->
+            <path d="M80 60 L110 38 L170 35 L210 55 L225 90 L230 140 L215 185 L185 210 L140 220 L95 210 L65 180 L50 140 L55 100 Z" fill="rgba(26,58,107,.3)" stroke="rgba(201,168,76,.4)" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <!-- Capital dot -->
+            <circle cx="152" cy="108" r="10" fill="rgba(201,168,76,.2)" stroke="rgba(201,168,76,.6)" stroke-width="1.5"><animate attributeName="r" values="10;16;10" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+            <circle cx="152" cy="108" r="5" fill="rgba(201,168,76,.9)"/>
+            <!-- Other govs -->
+            <circle cx="178" cy="128" r="6" fill="rgba(201,168,76,.5)"><animate attributeName="opacity" values=".5;.1;.5" dur="2.4s" repeatCount="indefinite"/></circle>
+            <circle cx="128" cy="130" r="6" fill="rgba(201,168,76,.5)"><animate attributeName="opacity" values=".5;.15;.5" dur="1.9s" repeatCount="indefinite"/></circle>
+            <circle cx="168" cy="162" r="6" fill="rgba(201,168,76,.5)"><animate attributeName="opacity" values=".5;.1;.5" dur="2.7s" repeatCount="indefinite"/></circle>
+            <circle cx="95" cy="118" r="6" fill="rgba(201,168,76,.5)"><animate attributeName="opacity" values=".5;.2;.5" dur="2.1s" repeatCount="indefinite"/></circle>
+            <circle cx="185" cy="150" r="6" fill="rgba(201,168,76,.5)"><animate attributeName="opacity" values=".5;.1;.5" dur="2.3s" repeatCount="indefinite"/></circle>
+            <!-- Route lines -->
+            <line x1="152" y1="108" x2="178" y2="128" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="152" y1="108" x2="128" y2="130" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="152" y1="108" x2="95" y2="118" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="178" y1="128" x2="168" y2="162" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="178" y1="128" x2="185" y2="150" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <!-- Labels -->
+            <text x="158" y="105" font-family="sans-serif" font-size="8" fill="rgba(201,168,76,.9)" font-weight="bold">Capital</text>
+            <text x="182" y="127" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,.65)">Hawalli</text>
+            <text x="105" y="128" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,.65)">Farwaniya</text>
+            <text x="170" y="175" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,.65)">Ahmadi</text>
+            <text x="65" y="116" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,.65)">Jahra</text>
+            <text x="188" y="162" font-family="sans-serif" font-size="6" fill="rgba(255,255,255,.55)">Mubarak</text>
+            <!-- Branding text -->
+            <text x="80" y="270" font-family="serif" font-size="13" fill="rgba(201,168,76,.35)" font-weight="700" letter-spacing="2">STATE OF KUWAIT</text>
+            <text x="82" y="285" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.2)" letter-spacing="4">6 GOVERNORATES COVERED</text>
+          </svg>
+          <div class="gold-bar"></div>
+        </div>
+        <div class="about-accent-card">
+          <div class="accent-num"><span data-count="8" data-sfx="+">0+</span></div>
+          <div class="accent-lbl">Years of Excellence</div>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal-r">
+        <div class="section-badge">Who We Are</div>
+        <h2 class="section-title">Built on Trust.<br>Fueled by <span class="gold-text">Speed.</span></h2>
+        <p class="section-subtitle mb-4">Azhaljack Logistic Services was founded with one mission: to redefine what delivery means in Kuwait. We didn't just enter the market — we set a new standard for it. Today, we are proud to be the State of Kuwait's most dependable consumer delivery and business services partner.</p>
+        <div class="feat"><div class="feat-icon"><i class="bi bi-lightning-charge-fill"></i></div><div><div class="feat-title">Unmatched Speed</div><div class="feat-text">Same-day and express delivery options across all six governorates of Kuwait — because your customers can't wait.</div></div></div>
+        <div class="feat"><div class="feat-icon"><i class="bi bi-graph-up-arrow"></i></div><div><div class="feat-title">Scalable Operations</div><div class="feat-text">Whether you're a boutique sending 10 packages or a corporation shipping 10,000 — our infrastructure scales seamlessly with your needs.</div></div></div>
+        <div class="feat"><div class="feat-icon"><i class="bi bi-award-fill"></i></div><div><div class="feat-title">Kuwait's Best — By Every Measure</div><div class="feat-text">Recognized by our clients, our industry peers, and our relentless track record. Not just a claim — a promise we honour every single day.</div></div></div>
+        <a href="{{ url_for('userroutes.about') }}" class="btn-gold mt-2">Our Full Story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES PREVIEW ══ -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-center mb-5 reveal">
+      <div class="section-badge">What We Offer</div>
+      <h2 class="section-title">Logistics & Business Solutions<br>Engineered for <span class="gold-text">Kuwait</span></h2>
+      <p class="section-subtitle">From last-mile delivery to full-scale fulfillment and business transformation — every service designed with precision for the Kuwaiti market.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-lightning-charge-fill"></i></div><div class="svc-title">Same-Day Delivery</div><p class="svc-text">Order by noon, delivered by evening across all Kuwait governorates. Our flagship service with a 98.7% on-time success rate.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-box-seam-fill"></i></div><div class="svc-title">E-Commerce Fulfillment</div><p class="svc-text">End-to-end fulfillment for online stores — warehousing, pick-pack, last-mile delivery, and return management.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-truck-front-fill"></i></div><div class="svc-title">Express Courier</div><p class="svc-text">Priority express pickup and delivery within 2–4 hours. For when ordinary delivery simply won't do.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-building-fill"></i></div><div class="svc-title">Corporate Logistics</div><p class="svc-text">Bespoke logistics contracts for enterprises, government entities, and large-scale retail chains throughout Kuwait.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-snow"></i></div><div class="svc-title">Cold-Chain Delivery</div><p class="svc-text">Temperature-controlled logistics for pharmaceuticals, gourmet foods, and any product that demands climate protection.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="svc-card" style="border-color:rgba(201,168,76,.3);background:linear-gradient(160deg,#fff 60%,rgba(201,168,76,.04) 100%);">
+          <div class="svc-icon" style="background:var(--gradient-gold);border-color:transparent;"><i class="bi bi-graph-up-arrow" style="color:var(--sapphire);"></i></div>
+          <div class="svc-title">Business Consultation</div>
+          <p class="svc-text">Strategy, setup, and revival for Kuwait businesses. We rescue struggling ventures, launch new ones, and build the frameworks that keep enterprises growing.</p>
+          <a href="{{ url_for('userroutes.services') }}#consultation" class="svc-link" style="color:var(--gold-dark);">Learn More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5 reveal">
+      <a href="{{ url_for('userroutes.services') }}" class="btn-outline-gold">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY CHOOSE US ══ -->
+<section class="bg-midnight">
+  <div class="container">
+    <div class="section-center mb-5 reveal">
+      <div class="section-badge on-dark">Why Azhaljack</div>
+      <h2 class="section-title on-dark">The Gold Standard<br>in <span class="gold-text">Kuwait Logistics</span></h2>
+      <p class="section-subtitle on-dark">We don't simply move packages. We build partnerships, honour commitments, and deliver results that grow your business.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">01</div><div class="why-title">Real-Time Tracking</div><div class="why-text">GPS-enabled live tracking so you and your customers always know exactly where every shipment stands — no guesswork.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">02</div><div class="why-title">100% Kuwait Coverage</div><div class="why-text">All six governorates — Capital, Hawalli, Farwaniya, Ahmadi, Jahra, Mubarak Al-Kabeer. No area is out of reach.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">03</div><div class="why-title">Dedicated Support</div><div class="why-text">A real human answers your call. Our customer support team operates six days a week to resolve any concern swiftly.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">04</div><div class="why-title">Cash on Delivery</div><div class="why-text">Full COD support with daily settlement. We collect on your behalf, so your cash flow never skips a beat.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">05</div><div class="why-title">Insured Shipments</div><div class="why-text">Every package is covered. Ship with complete peace of mind knowing your goods are protected from pickup to doorstep.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">06</div><div class="why-title">Smart API Integration</div><div class="why-text">Connect your e-commerce platform or ERP directly to our delivery engine with our developer-friendly API.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">07</div><div class="why-title">Competitive Pricing</div><div class="why-text">Premium service doesn't have to cost a fortune. Flexible pricing models designed to suit every business size.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">08</div><div class="why-title">Proven Track Record</div><div class="why-text">8+ years, 500,000+ deliveries, and a 4.9-star average rating. Our results speak louder than any promise.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ KUWAIT COVERAGE ══ -->
+<div class="coverage-section">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 reveal-l">
+        <div class="section-badge on-dark">Full State Coverage</div>
+        <h2 class="section-title on-dark">Every Governorate.<br>Every Neighbourhood.<br><span class="gold-text">Every Door.</span></h2>
+        <p class="section-subtitle on-dark mb-4">Azhaljack is the only consumer delivery company in Kuwait with verified active coverage across all six governorates — not just the urban centres.</p>
+        <div class="row g-3 mb-4">
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Capital Governorate</div></div></div>
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Hawalli Governorate</div></div></div>
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Farwaniya Governorate</div></div></div>
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Ahmadi Governorate</div></div></div>
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Jahra Governorate</div></div></div>
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Mubarak Al-Kabeer</div></div></div>
+        </div>
+        <a href="{{ url_for('userroutes.contact') }}" class="btn-gold">Start Delivering Nationwide</a>
+      </div>
+      <div class="col-lg-6 reveal-r d-flex justify-content-center">
+        <div style="position:relative;width:100%;max-width:440px;">
+          <svg viewBox="0 0 320 260" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+            <defs>
+              <radialGradient id="mapglow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(201,168,76,0.12)"/>
+                <stop offset="100%" stop-color="rgba(201,168,76,0)"/>
+              </radialGradient>
+            </defs>
+            <ellipse cx="160" cy="130" rx="140" ry="115" fill="url(#mapglow)"/>
+            <path d="M82 65 L112 42 L178 38 L218 58 L235 95 L240 148 L222 196 L190 218 L145 228 L98 218 L68 186 L52 145 L57 100 Z" fill="rgba(26,58,107,.35)" stroke="rgba(201,168,76,.45)" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <!-- Capital -->
+            <circle cx="158" cy="118" r="14" fill="rgba(201,168,76,.12)" stroke="rgba(201,168,76,.0)" stroke-width="1"><animate attributeName="r" values="14;22;14" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0;.8" dur="2s" repeatCount="indefinite"/></circle>
+            <circle cx="158" cy="118" r="8" fill="rgba(201,168,76,.9)"/>
+            <text x="164" y="113" font-family="sans-serif" font-size="8" fill="rgba(201,168,76,.95)" font-weight="700">Kuwait City</text>
+            <!-- Hawalli -->
+            <circle cx="188" cy="140" r="7" fill="rgba(201,168,76,.6)"><animate attributeName="opacity" values=".6;.15;.6" dur="2.3s" repeatCount="indefinite"/></circle>
+            <circle cx="188" cy="140" r="4" fill="rgba(201,168,76,.85)"/>
+            <text x="195" y="138" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,.75)">Hawalli</text>
+            <!-- Farwaniya -->
+            <circle cx="130" cy="145" r="7" fill="rgba(201,168,76,.6)"><animate attributeName="opacity" values=".6;.2;.6" dur="1.9s" repeatCount="indefinite"/></circle>
+            <circle cx="130" cy="145" r="4" fill="rgba(201,168,76,.85)"/>
+            <text x="100" y="143" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,.75)">Farwaniya</text>
+            <!-- Ahmadi -->
+            <circle cx="178" cy="178" r="7" fill="rgba(201,168,76,.6)"><animate attributeName="opacity" values=".6;.15;.6" dur="2.6s" repeatCount="indefinite"/></circle>
+            <circle cx="178" cy="178" r="4" fill="rgba(201,168,76,.85)"/>
+            <text x="184" y="176" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,.75)">Ahmadi</text>
+            <!-- Jahra -->
+            <circle cx="96" cy="128" r="7" fill="rgba(201,168,76,.6)"><animate attributeName="opacity" values=".6;.2;.6" dur="2.1s" repeatCount="indefinite"/></circle>
+            <circle cx="96" cy="128" r="4" fill="rgba(201,168,76,.85)"/>
+            <text x="70" y="126" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,.75)">Jahra</text>
+            <!-- Mubarak -->
+            <circle cx="200" cy="162" r="7" fill="rgba(201,168,76,.6)"><animate attributeName="opacity" values=".6;.15;.6" dur="2.4s" repeatCount="indefinite"/></circle>
+            <circle cx="200" cy="162" r="4" fill="rgba(201,168,76,.85)"/>
+            <text x="206" y="160" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,.7)">Mubarak</text>
+            <!-- Route lines -->
+            <line x1="158" y1="118" x2="188" y2="140" stroke="rgba(201,168,76,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="158" y1="118" x2="130" y2="145" stroke="rgba(201,168,76,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="158" y1="118" x2="96" y2="128" stroke="rgba(201,168,76,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="188" y1="140" x2="178" y2="178" stroke="rgba(201,168,76,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="188" y1="140" x2="200" y2="162" stroke="rgba(201,168,76,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="130" y1="145" x2="178" y2="178" stroke="rgba(201,168,76,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          </svg>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:1rem;">
+            <div class="consult-stat-card"><div class="consult-stat-num">6/6</div><div class="consult-stat-lbl">Governorates</div></div>
+            <div class="consult-stat-card"><div class="consult-stat-num">99%</div><div class="consult-stat-lbl">On-Time</div></div>
+            <div class="consult-stat-card"><div class="consult-stat-num">18m</div><div class="consult-stat-lbl">Avg. ETA</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="bg-dark-alt">
+  <div class="container">
+    <div class="section-center mb-5 reveal">
+      <div class="section-badge">Client Voices</div>
+      <h2 class="section-title">What Kuwait's <span class="gold-text">Top Businesses</span> Say</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 reveal">
+        <div class="testi-card">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Azhaljack transformed our delivery operations overnight. Our customer complaints dropped by 80% within the first month. They are simply the best in Kuwait.</p>
+          <div class="testi-name">Faisal Al-Mutairi</div>
+          <div class="testi-role">CEO, Noon Kuwait Partner</div>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="testi-card">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <div class="testi-quote">"</div>
+          <p class="testi-text">We've tried four delivery companies before settling on Azhaljack. The professionalism, the tracking system, the on-time rate — nothing else compares in the Kuwaiti market.</p>
+          <div class="testi-name">Sara Al-Rashidi</div>
+          <div class="testi-role">Operations Director, Luxury Retail Brand</div>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="testi-card">
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Their business consultation team helped us restructure our entire supply chain strategy. Six months later, we had reduced operating costs by 34%. Truly remarkable expertise.</p>
+          <div class="testi-name">Dr. Ahmad Khalid</div>
+          <div class="testi-role">Supply Chain Director, Medical Distributor</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BAND ══ -->
+<div class="cta-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mb-4 mb-lg-0 reveal-l">
+        <div class="section-badge" style="background:rgba(15,45,84,.12);border-color:rgba(15,45,84,.25);color:rgba(15,45,84,.7);">Start Today</div>
+        <h2 class="cta-title">Ready to Ship Smarter?<br>Kuwait Awaits Your Delivery.</h2>
+        <p class="cta-sub">Join 5,000+ businesses that trust Azhaljack to move what matters most. Get your first delivery quote in under 60 seconds.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end d-flex flex-column gap-3 align-items-lg-end reveal-r">
+        <a href="{{ url_for('userroutes.contact') }}" class="btn-dark">Get a Free Quote</a>
+        <a href="tel:+965XXXXXXXX" class="btn-dark"><i class="bi bi-telephone-fill me-2"></i>Call Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
