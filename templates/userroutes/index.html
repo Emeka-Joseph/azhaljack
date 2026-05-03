@@ -10,30 +10,34 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6 hero-content">
-        <div class="hero-badge"><span class="dot"></span>Kuwait's Premier Logistics Partner</div>
-        <h1 class="hero-title">
+        <div class="hero-badge"><span class="dot"></span><span data-i18n="i.hero.badge">Kuwait's Premier Logistics Partner</span></div>
+        <h1 class="hero-title lang-en">
           Delivering <span class="highlight">Excellence</span><br>
           Across Every Corner<br>of Kuwait
         </h1>
-        <p class="hero-subtitle">From bustling Kuwait City souqs to quiet residential streets — Azhaljack Logistic Services reaches every door, every time. The State of Kuwait's most trusted consumer delivery company.</p>
+        <h1 class="hero-title lang-ar" hidden>
+          التوصيل بامتياز<br>إلى كل ركن<br>في الكويت
+        </h1>
+        <p class="hero-subtitle lang-en">From bustling Kuwait City souqs to quiet residential streets — Azhaljack Logistic Services reaches every door, every time. The State of Kuwait's most trusted consumer delivery company.</p>
+        <p class="hero-subtitle lang-ar" hidden>من أسواق الكويت الصاخبة إلى الأحياء الهادئة — أزهال جاك تصل إلى كل باب، في كل وقت. شركة التوصيل الأكثر موثوقية في دولة الكويت.</p>
         <div class="hero-btns">
-          <a href="{{ url_for('userroutes.services') }}" class="btn-gold">Explore Our Services</a>
-          <a href="{{ url_for('userroutes.contact') }}" class="btn-outline-gold on-dark">Get a Quote</a>
+          <a href="{{ url_for('userroutes.services') }}" class="btn-gold" data-i18n="btn.explore">Explore Our Services</a>
+          <a href="{{ url_for('userroutes.contact') }}" class="btn-outline-gold on-dark" data-i18n="btn.quote">Get a Quote</a>
         </div>
         <div class="hero-stats">
           <div class="hero-stat">
             <div class="hero-stat-num"><span data-count="20000" data-sfx="+">0+</span></div>
-            <div class="hero-stat-label">Deliveries Monthly</div>
+            <div class="hero-stat-label" data-i18n="i.hstat.monthly">Deliveries Monthly</div>
           </div>
           <div class="hero-divider"></div>
           <div class="hero-stat">
             <div class="hero-stat-num"><span data-count="99" data-sfx="%">0%</span></div>
-            <div class="hero-stat-label">On-Time Rate</div>
+            <div class="hero-stat-label" data-i18n="i.hstat.rate">On-Time Rate</div>
           </div>
           <div class="hero-divider"></div>
           <div class="hero-stat">
             <div class="hero-stat-num"><span data-count="6" data-sfx="">0</span></div>
-            <div class="hero-stat-label">Governorates Covered</div>
+            <div class="hero-stat-label" data-i18n="i.hstat.govs">Governorates Covered</div>
           </div>
         </div>
       </div>
@@ -75,10 +79,10 @@
 <div class="stats-strip">
   <div class="container">
     <div class="row g-4 align-items-center text-center">
-      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="20000" data-sfx="+">0</span></div><div class="stat-lbl">Monthly Deliveries</div></div>
-      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="5000" data-sfx="+">0</span></div><div class="stat-lbl">Happy Clients</div></div>
-      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="6" data-sfx="">0</span></div><div class="stat-lbl">Governorates</div></div>
-      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="99" data-sfx="%">0</span></div><div class="stat-lbl">On-Time Delivery</div></div>
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="20000" data-sfx="+">0</span></div><div class="stat-lbl" data-i18n="i.stat.monthly">Monthly Deliveries</div></div>
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="5000" data-sfx="+">0</span></div><div class="stat-lbl" data-i18n="i.stat.clients">Happy Clients</div></div>
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="6" data-sfx="">0</span></div><div class="stat-lbl" data-i18n="i.stat.govs">Governorates</div></div>
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num"><span data-count="99" data-sfx="%">0</span></div><div class="stat-lbl" data-i18n="i.stat.ontime">On-Time Delivery</div></div>
     </div>
   </div>
 </div>
@@ -87,9 +91,11 @@
 <section class="bg-dark-alt">
   <div class="container">
     <div class="section-center mb-5 reveal">
-      <div class="section-badge">Behind Every Delivery</div>
-      <h2 class="section-title">World-Class Operations,<br><span class="gold-text">Built for Kuwait</span></h2>
-      <p class="section-subtitle">Our infrastructure — from fleet to fulfillment technology — is engineered to set an impossible standard for competitors to match.</p>
+      <div class="section-badge" data-i18n="i.ops.badge">Behind Every Delivery</div>
+      <h2 class="section-title lang-en">World-Class Operations,<br><span class="gold-text">Built for Kuwait</span></h2>
+      <h2 class="section-title lang-ar" hidden>عمليات عالمية المستوى،<br><span class="gold-text">مبنية للكويت</span></h2>
+      <p class="section-subtitle lang-en">Our infrastructure — from fleet to fulfillment technology — is engineered to set an impossible standard for competitors to match.</p>
+      <p class="section-subtitle lang-ar" hidden>بنيتنا التحتية — من الأسطول إلى تقنيات التنفيذ — مصممة لتضع معياراً لا يستطيع المنافسون بلوغه.</p>
     </div>
     <div class="row g-4">
       <!-- Card 1: Fleet -->
@@ -99,9 +105,9 @@
             <img src="{{ url_for('static', filename='images/geely2.png') }}" alt="Azhaljack Fleet" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.92;">
           </div>
           <div class="img-card-overlay">
-            <div class="img-card-badge">Our Fleet</div>
-            <div class="img-card-title">200+ Branded Vehicles</div>
-            <div class="img-card-sub">GPS-tracked, insured, Kuwait-wide</div>
+            <div class="img-card-badge" data-i18n="i.ops.c1.badge">Our Fleet</div>
+            <div class="img-card-title" data-i18n="i.ops.c1.title">200+ Branded Vehicles</div>
+            <div class="img-card-sub" data-i18n="i.ops.c1.sub">GPS-tracked, insured, Kuwait-wide</div>
           </div>
         </div>
       </div>
@@ -160,9 +166,9 @@
             </svg>
           </div>
           <div class="img-card-overlay">
-            <div class="img-card-badge">Pickup Network</div>
-            <div class="img-card-title">Multi-Point Collection Chains</div>
-            <div class="img-card-sub">From every partner — straight to every door</div>
+            <div class="img-card-badge" data-i18n="i.ops.c2.badge">Pickup Network</div>
+            <div class="img-card-title" data-i18n="i.ops.c2.title">Multi-Point Collection Chains</div>
+            <div class="img-card-sub" data-i18n="i.ops.c2.sub">From every partner — straight to every door</div>
           </div>
         </div>
       </div>
@@ -197,9 +203,9 @@
             </svg>
           </div>
           <div class="img-card-overlay">
-            <div class="img-card-badge">Smart Technology</div>
-            <div class="img-card-title">Live GPS Tracking Platform</div>
-            <div class="img-card-sub">Real-time visibility, every shipment</div>
+            <div class="img-card-badge" data-i18n="i.ops.c3.badge">Smart Technology</div>
+            <div class="img-card-title" data-i18n="i.ops.c3.title">Live GPS Tracking Platform</div>
+            <div class="img-card-sub" data-i18n="i.ops.c3.sub">Real-time visibility, every shipment</div>
           </div>
         </div>
       </div>
@@ -211,30 +217,36 @@
 <section class="bg-white">
   <div class="container">
     <div class="section-center mb-5 reveal">
-      <div class="section-badge">Our Process</div>
-      <h2 class="section-title">Delivery in <span class="gold-text">4 Simple Steps</span></h2>
-      <p class="section-subtitle">From the moment you request a pickup to the second your customer signs for it — every step is tracked, optimised, and guaranteed.</p>
+      <div class="section-badge" data-i18n="i.proc.badge">Our Process</div>
+      <h2 class="section-title lang-en">Delivery in <span class="gold-text">4 Simple Steps</span></h2>
+      <h2 class="section-title lang-ar" hidden>التوصيل في <span class="gold-text">٤ خطوات بسيطة</span></h2>
+      <p class="section-subtitle lang-en">From the moment you request a pickup to the second your customer signs for it — every step is tracked, optimised, and guaranteed.</p>
+      <p class="section-subtitle lang-ar" hidden>من لحظة طلب الاستلام حتى توقيع عميلك — كل خطوة مُتتبَّعة ومُحسَّنة ومضمونة.</p>
     </div>
     <div class="row g-4">
       <div class="col-6 col-lg-3 process-step reveal">
         <div class="step-icon"><i class="bi bi-phone-fill"></i><div class="step-num">1</div></div>
-        <div class="step-title">Book Online</div>
-        <p class="step-text">Place your order, Instant confirmation, zero paperwork.</p>
+        <div class="step-title" data-i18n="i.proc.step1">Book Online</div>
+        <p class="step-text lang-en">Place your order, Instant confirmation, zero paperwork.</p>
+        <p class="step-text lang-ar" hidden>أضف طلبك، تأكيد فوري، بدون أوراق.</p>
       </div>
       <div class="col-6 col-lg-3 process-step reveal">
         <div class="step-icon"><i class="bi bi-box-seam-fill"></i><div class="step-num">2</div></div>
-        <div class="step-title">We Collect</div>
-        <p class="step-text">A dedicated courier arrives at your location within 30 minutes of your request. Your item is packaged and logged.</p>
+        <div class="step-title" data-i18n="i.proc.step2">We Collect</div>
+        <p class="step-text lang-en">A dedicated courier arrives at your location within 30 minutes of your request. Your item is packaged and logged.</p>
+        <p class="step-text lang-ar" hidden>يصل مندوب مخصص إلى موقعك خلال ٣٠ دقيقة. تُعبَّأ شحنتك وتُسجَّل.</p>
       </div>
       <div class="col-6 col-lg-3 process-step reveal">
         <div class="step-icon"><i class="bi bi-truck-front-fill"></i><div class="step-num">3</div></div>
-        <div class="step-title">In Transit</div>
-        <p class="step-text">Live GPS tracking activates. Your customer receives real-time updates. Our route algorithms ensure the fastest path.</p>
+        <div class="step-title" data-i18n="i.proc.step3">In Transit</div>
+        <p class="step-text lang-en">Live GPS tracking activates. Your customer receives real-time updates. Our route algorithms ensure the fastest path.</p>
+        <p class="step-text lang-ar" hidden>يُفعَّل تتبع GPS المباشر. يتلقى عميلك تحديثات فورية. خوارزمياتنا تضمن أسرع مسار.</p>
       </div>
       <div class="col-6 col-lg-3 process-step reveal">
         <div class="step-icon"><i class="bi bi-check-circle-fill"></i><div class="step-num">4</div></div>
-        <div class="step-title">Delivered</div>
-        <p class="step-text">Signature, photo, and ePOD sent instantly. COD collected and settled next business day. Mission complete.</p>
+        <div class="step-title" data-i18n="i.proc.step4">Delivered</div>
+        <p class="step-text lang-en">Signature, photo, and ePOD sent instantly. COD collected and settled next business day. Mission complete.</p>
+        <p class="step-text lang-ar" hidden>توقيع وصورة وإثبات توصيل إلكتروني فوري. الدفع عند الاستلام يُحوَّل في يوم العمل التالي.</p>
       </div>
     </div>
   </div>
@@ -247,31 +259,25 @@
       <div class="col-lg-5 about-img-wrap reveal-l">
         <div class="about-img-box">
           <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;opacity:.85;">
-            <!-- Kuwait stylized map -->
             <path d="M80 60 L110 38 L170 35 L210 55 L225 90 L230 140 L215 185 L185 210 L140 220 L95 210 L65 180 L50 140 L55 100 Z" fill="rgba(26,58,107,.3)" stroke="rgba(201,168,76,.4)" stroke-width="1.5" stroke-dasharray="5 4"/>
-            <!-- Capital dot -->
             <circle cx="152" cy="108" r="10" fill="rgba(201,168,76,.2)" stroke="rgba(201,168,76,.6)" stroke-width="1.5"><animate attributeName="r" values="10;16;10" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
             <circle cx="152" cy="108" r="5" fill="rgba(201,168,76,.9)"/>
-            <!-- Other govs -->
             <circle cx="178" cy="128" r="6" fill="rgba(201,168,76,.5)"><animate attributeName="opacity" values=".5;.1;.5" dur="2.4s" repeatCount="indefinite"/></circle>
             <circle cx="128" cy="130" r="6" fill="rgba(201,168,76,.5)"><animate attributeName="opacity" values=".5;.15;.5" dur="1.9s" repeatCount="indefinite"/></circle>
             <circle cx="168" cy="162" r="6" fill="rgba(201,168,76,.5)"><animate attributeName="opacity" values=".5;.1;.5" dur="2.7s" repeatCount="indefinite"/></circle>
             <circle cx="95" cy="118" r="6" fill="rgba(201,168,76,.5)"><animate attributeName="opacity" values=".5;.2;.5" dur="2.1s" repeatCount="indefinite"/></circle>
             <circle cx="185" cy="150" r="6" fill="rgba(201,168,76,.5)"><animate attributeName="opacity" values=".5;.1;.5" dur="2.3s" repeatCount="indefinite"/></circle>
-            <!-- Route lines -->
             <line x1="152" y1="108" x2="178" y2="128" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
             <line x1="152" y1="108" x2="128" y2="130" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
             <line x1="152" y1="108" x2="95" y2="118" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
             <line x1="178" y1="128" x2="168" y2="162" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
             <line x1="178" y1="128" x2="185" y2="150" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
-            <!-- Labels -->
             <text x="158" y="105" font-family="sans-serif" font-size="8" fill="rgba(201,168,76,.9)" font-weight="bold">Capital</text>
             <text x="182" y="127" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,.65)">Hawalli</text>
             <text x="105" y="128" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,.65)">Farwaniya</text>
             <text x="170" y="175" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,.65)">Ahmadi</text>
             <text x="65" y="116" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,.65)">Jahra</text>
             <text x="188" y="162" font-family="sans-serif" font-size="6" fill="rgba(255,255,255,.55)">Mubarak</text>
-            <!-- Branding text -->
             <text x="80" y="270" font-family="serif" font-size="13" fill="rgba(201,168,76,.35)" font-weight="700" letter-spacing="2">STATE OF KUWAIT</text>
             <text x="82" y="285" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,.2)" letter-spacing="4">6 GOVERNORATES COVERED</text>
           </svg>
@@ -279,17 +285,19 @@
         </div>
         <div class="about-accent-card">
           <div class="accent-num"><span data-count="8" data-sfx="+">0+</span></div>
-          <div class="accent-lbl">Years of Excellence</div>
+          <div class="accent-lbl" data-i18n="i.about.years">Years of Excellence</div>
         </div>
       </div>
       <div class="col-lg-7 reveal-r">
-        <div class="section-badge">Who We Are</div>
-        <h2 class="section-title">Built on Trust.<br>Fueled by <span class="gold-text">Speed.</span></h2>
-        <p class="section-subtitle mb-4">Azhaljack Logistic Services was founded with one mission: to redefine what delivery means in Kuwait. We didn't just enter the market — we set a new standard for it. Today, we are proud to be one of the State of Kuwait's most dependable consumer delivery and business services partner.</p>
-        <div class="feat"><div class="feat-icon"><i class="bi bi-lightning-charge-fill"></i></div><div><div class="feat-title">Unmatched Speed</div><div class="feat-text">Same-day and express delivery options across all six governorates of Kuwait — because your customers can't wait.</div></div></div>
-        <div class="feat"><div class="feat-icon"><i class="bi bi-graph-up-arrow"></i></div><div><div class="feat-title">Scalable Operations</div><div class="feat-text">Whether you're a boutique sending 10 packages or a corporation shipping 10,000 — our infrastructure scales seamlessly with your needs.</div></div></div>
-        <div class="feat"><div class="feat-icon"><i class="bi bi-award-fill"></i></div><div><div class="feat-title">Kuwait's Best — By Every Measure</div><div class="feat-text">Recognized by our clients, our industry peers, and our relentless track record. Not just a claim — a promise we honour every single day.</div></div></div>
-        <a href="{{ url_for('userroutes.about') }}" class="btn-gold mt-2">Our Full Story</a>
+        <div class="section-badge" data-i18n="i.about.badge">Who We Are</div>
+        <h2 class="section-title lang-en">Built on Trust.<br>Fueled by <span class="gold-text">Speed.</span></h2>
+        <h2 class="section-title lang-ar" hidden>مبنيون على الثقة،<br>مدفوعون بـ<span class="gold-text">السرعة.</span></h2>
+        <p class="section-subtitle mb-4 lang-en">Azhaljack Logistic Services was founded with one mission: to redefine what delivery means in Kuwait. We didn't just enter the market — we set a new standard for it. Today, we are proud to be one of the State of Kuwait's most dependable consumer delivery and business services partner.</p>
+        <p class="section-subtitle mb-4 lang-ar" hidden>تأسست أزهال جاك للخدمات اللوجستية بمهمة واحدة: إعادة تعريف معنى التوصيل في الكويت. لم ندخل السوق فحسب — بل وضعنا معياراً جديداً له. اليوم، نفخر بكوننا أحد أكثر شركاء التوصيل موثوقية في دولة الكويت.</p>
+        <div class="feat"><div class="feat-icon"><i class="bi bi-lightning-charge-fill"></i></div><div><div class="feat-title lang-en">Unmatched Speed</div><div class="feat-title lang-ar" hidden>سرعة لا مثيل لها</div><div class="feat-text lang-en">Same-day and express delivery options across all six governorates of Kuwait — because your customers can't wait.</div><div class="feat-text lang-ar" hidden>خيارات توصيل في نفس اليوم وسريع عبر محافظات الكويت الست — لأن عملاءك لا يستطيعون الانتظار.</div></div></div>
+        <div class="feat"><div class="feat-icon"><i class="bi bi-graph-up-arrow"></i></div><div><div class="feat-title lang-en">Scalable Operations</div><div class="feat-title lang-ar" hidden>عمليات قابلة للتوسع</div><div class="feat-text lang-en">Whether you're a boutique sending 10 packages or a corporation shipping 10,000 — our infrastructure scales seamlessly with your needs.</div><div class="feat-text lang-ar" hidden>سواء كنت متجراً صغيراً يرسل ١٠ طرود أو شركة تشحن ١٠,٠٠٠ — بنيتنا التحتية تتوسع بسلاسة مع احتياجاتك.</div></div></div>
+        <div class="feat"><div class="feat-icon"><i class="bi bi-award-fill"></i></div><div><div class="feat-title lang-en">Kuwait's Best — By Every Measure</div><div class="feat-title lang-ar" hidden>الأفضل في الكويت — بكل المقاييس</div><div class="feat-text lang-en">Recognized by our clients, our industry peers, and our relentless track record. Not just a claim — a promise we honour every single day.</div><div class="feat-text lang-ar" hidden>معترف بنا من عملائنا وأقراننا في الصناعة وسجلنا الحافل. ليس مجرد ادعاء — بل وعد نفي به كل يوم.</div></div></div>
+        <a href="{{ url_for('userroutes.about') }}" class="btn-gold mt-2" data-i18n="btn.story">Our Full Story</a>
       </div>
     </div>
   </div>
@@ -299,27 +307,30 @@
 <section class="services-section">
   <div class="container">
     <div class="section-center mb-5 reveal">
-      <div class="section-badge">What We Offer</div>
-      <h2 class="section-title">Logistics & Business Solutions<br>Engineered for <span class="gold-text">Kuwait</span></h2>
-      <p class="section-subtitle">From last-mile delivery to full-scale fulfillment and business transformation — every service designed with precision for the Kuwaiti market.</p>
+      <div class="section-badge" data-i18n="i.svc.badge">What We Offer</div>
+      <h2 class="section-title lang-en">Logistics & Business Solutions<br>Engineered for <span class="gold-text">Kuwait</span></h2>
+      <h2 class="section-title lang-ar" hidden>حلول لوجستية وتجارية<br>مصممة لـ<span class="gold-text">الكويت</span></h2>
+      <p class="section-subtitle lang-en">From last-mile delivery to full-scale fulfillment and business transformation — every service designed with precision for the Kuwaiti market.</p>
+      <p class="section-subtitle lang-ar" hidden>من توصيل الميل الأخير إلى التنفيذ الكامل وتحويل الأعمال — كل خدمة مصممة بدقة للسوق الكويتي.</p>
     </div>
     <div class="row g-4">
-      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-lightning-charge-fill"></i></div><div class="svc-title">Same-Day Delivery</div><p class="svc-text">Order and get your order(s)elivered same day across all Kuwait governorates. Our flagship service with a 99% on-time success rate.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
-      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-box-seam-fill"></i></div><div class="svc-title">E-Commerce Fulfillment</div><p class="svc-text">End-to-end fulfillment for online stores — warehousing, pick-pack, last-mile delivery, and return management.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
-      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-truck-front-fill"></i></div><div class="svc-title">Express Courier</div><p class="svc-text">Priority express pickup and delivery within minutes (depending on the distance).</p><a href="{{ url_for('userroutes.services') }}" class="svc-link">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
-      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-building-fill"></i></div><div class="svc-title">Corporate Logistics</div><p class="svc-text">Bespoke logistics contracts for enterprises, government entities, and large-scale retail chains throughout Kuwait.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
-      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-snow"></i></div><div class="svc-title">Cold-Chain Delivery</div><p class="svc-text">Temperature-controlled logistics for pharmaceuticals, gourmet foods, and any product that demands climate protection.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-lightning-charge-fill"></i></div><div class="svc-title" data-i18n="i.svc.1">Same-Day Delivery</div><p class="svc-text lang-en">Order and get your order(s) delivered same day across all Kuwait governorates. Our flagship service with a 99% on-time success rate.</p><p class="svc-text lang-ar" hidden>اطلب واستلم طلباتك في نفس اليوم عبر جميع محافظات الكويت. خدمتنا الرائدة بمعدل نجاح ٩٩٪ في الالتزام بالوقت.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-box-seam-fill"></i></div><div class="svc-title" data-i18n="i.svc.2">E-Commerce Fulfillment</div><p class="svc-text lang-en">End-to-end fulfillment for online stores — warehousing, pick-pack, last-mile delivery, and return management.</p><p class="svc-text lang-ar" hidden>تنفيذ شامل للمتاجر الإلكترونية — تخزين، تعبئة، توصيل لباب المنزل، وإدارة المرتجعات.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-truck-front-fill"></i></div><div class="svc-title" data-i18n="i.svc.3">Express Courier</div><p class="svc-text lang-en">Priority express pickup and delivery within minutes (depending on the distance).</p><p class="svc-text lang-ar" hidden>استلام وتوصيل سريع ذو أولوية خلال دقائق (بحسب المسافة).</p><a href="{{ url_for('userroutes.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-building-fill"></i></div><div class="svc-title" data-i18n="i.svc.4">Corporate Logistics</div><p class="svc-text lang-en">Bespoke logistics contracts for enterprises, government entities, and large-scale retail chains throughout Kuwait.</p><p class="svc-text lang-ar" hidden>عقود لوجستية مخصصة للشركات والجهات الحكومية وسلاسل التجزئة الكبرى في الكويت.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-snow"></i></div><div class="svc-title" data-i18n="i.svc.5">Cold-Chain Delivery</div><p class="svc-text lang-en">Temperature-controlled logistics for pharmaceuticals, gourmet foods, and any product that demands climate protection.</p><p class="svc-text lang-ar" hidden>لوجستيات بتحكم في درجة الحرارة للأدوية والأغذية الفاخرة وأي منتج يحتاج حماية مناخية.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
       <div class="col-lg-4 col-md-6 reveal">
         <div class="svc-card" style="border-color:rgba(201,168,76,.3);background:linear-gradient(160deg,#fff 60%,rgba(201,168,76,.04) 100%);">
           <div class="svc-icon" style="background:var(--gradient-gold);border-color:transparent;"><i class="bi bi-graph-up-arrow" style="color:var(--sapphire);"></i></div>
-          <div class="svc-title">Business Consultation</div>
-          <p class="svc-text">Strategy, setup, and revival for Kuwait businesses. We rescue struggling ventures, launch new ones, and build the frameworks that keep enterprises growing.</p>
-          <a href="{{ url_for('userroutes.services') }}#consultation" class="svc-link" style="color:var(--gold-dark);">Learn More <i class="bi bi-arrow-right"></i></a>
+          <div class="svc-title" data-i18n="i.svc.6">Business Consultation</div>
+          <p class="svc-text lang-en">Strategy, setup, and revival for Kuwait businesses. We rescue struggling ventures, launch new ones, and build the frameworks that keep enterprises growing.</p>
+          <p class="svc-text lang-ar" hidden>استراتيجية وتأسيس وإنعاش للأعمال الكويتية. ننقذ المشاريع المتعثرة، نطلق جديدة، ونبني أطراً تُبقي الشركات في نمو مستمر.</p>
+          <a href="{{ url_for('userroutes.services') }}#consultation" class="svc-link" style="color:var(--gold-dark);" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
     </div>
     <div class="text-center mt-5 reveal">
-      <a href="{{ url_for('userroutes.services') }}" class="btn-outline-gold">View All Services</a>
+      <a href="{{ url_for('userroutes.services') }}" class="btn-outline-gold" data-i18n="btn.all-svc">View All Services</a>
     </div>
   </div>
 </section>
@@ -328,19 +339,21 @@
 <section class="bg-midnight">
   <div class="container">
     <div class="section-center mb-5 reveal">
-      <div class="section-badge on-dark">Why Azhaljack</div>
-      <h2 class="section-title on-dark">The Gold Standard<br>in <span class="gold-text">Kuwait Logistics</span></h2>
-      <p class="section-subtitle on-dark">We don't simply move packages. We build partnerships, honour commitments, and deliver results that grow your business.</p>
+      <div class="section-badge on-dark" data-i18n="i.why.badge">Why Azhaljack</div>
+      <h2 class="section-title on-dark lang-en">The Gold Standard<br>in <span class="gold-text">Kuwait Logistics</span></h2>
+      <h2 class="section-title on-dark lang-ar" hidden>المعيار الذهبي<br>في <span class="gold-text">لوجستيات الكويت</span></h2>
+      <p class="section-subtitle on-dark lang-en">We don't simply move packages. We build partnerships, honour commitments, and deliver results that grow your business.</p>
+      <p class="section-subtitle on-dark lang-ar" hidden>نحن لا نحرك الطرود فحسب. نبني شراكات، ننفذ التزامات، ونحقق نتائج تنمي أعمالك.</p>
     </div>
     <div class="row g-4">
-      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">01</div><div class="why-title">Real-Time Tracking</div><div class="why-text">GPS-enabled live tracking so you and your customers always know exactly where every shipment stands — no guesswork.</div></div></div>
-      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">02</div><div class="why-title">100% Kuwait Coverage</div><div class="why-text">All six governorates — Capital, Hawalli, Farwaniya, Ahmadi, Jahra, Mubarak Al-Kabeer. No area is out of reach.</div></div></div>
-      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">03</div><div class="why-title">Dedicated Support</div><div class="why-text">A real human answers your call. Our customer support team operates six days a week to resolve any concern swiftly.</div></div></div>
-      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">04</div><div class="why-title">Cash on Delivery</div><div class="why-text">Full COD support with daily settlement. We collect on your behalf, so your cash flow never skips a beat.</div></div></div>
-      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">05</div><div class="why-title">Insured Shipments</div><div class="why-text">Every package is covered. Ship with complete peace of mind knowing your goods are protected from pickup to doorstep.</div></div></div>
-      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">06</div><div class="why-title">On-Demand Pickup Runs</div><div class="why-text">Schedule a collection from anywhere in Kuwait. Our dedicated drivers arrive on time so your operations never stall.</div></div></div>
-      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">07</div><div class="why-title">Competitive Pricing</div><div class="why-text">Premium service doesn't have to cost a fortune. Flexible pricing models designed to suit every business size.</div></div></div>
-      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">08</div><div class="why-title">Proven Track Record</div><div class="why-text">8+ years, 500,000+ deliveries, and a 4.9-star average rating. Our results speak louder than any promise.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">01</div><div class="why-title" data-i18n="i.why.1">Real-Time Tracking</div><div class="why-text lang-en">GPS-enabled live tracking so you and your customers always know exactly where every shipment stands — no guesswork.</div><div class="why-text lang-ar" hidden>تتبع مباشر بتقنية GPS حتى تعرف أنت وعملاؤك دائماً أين كل شحنة بالضبط — بدون تخمين.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">02</div><div class="why-title" data-i18n="i.why.2">100% Kuwait Coverage</div><div class="why-text lang-en">All six governorates — Capital, Hawalli, Farwaniya, Ahmadi, Jahra, Mubarak Al-Kabeer. No area is out of reach.</div><div class="why-text lang-ar" hidden>المحافظات الست — العاصمة، حولي، الفروانية، الأحمدي، الجهراء، مبارك الكبير. لا منطقة خارج نطاق خدمتنا.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">03</div><div class="why-title" data-i18n="i.why.3">Dedicated Support</div><div class="why-text lang-en">A real human answers your call. Our customer support team operates six days a week to resolve any concern swiftly.</div><div class="why-text lang-ar" hidden>إنسان حقيقي يجيب على اتصالك. فريق دعمنا يعمل ستة أيام في الأسبوع لحل أي استفسار بسرعة.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">04</div><div class="why-title" data-i18n="i.why.4">Cash on Delivery</div><div class="why-text lang-en">Full COD support with daily settlement. We collect on your behalf, so your cash flow never skips a beat.</div><div class="why-text lang-ar" hidden>دعم كامل للدفع عند الاستلام مع تسوية يومية. نجمع نيابةً عنك حتى لا تتعطل تدفقاتك النقدية.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">05</div><div class="why-title" data-i18n="i.why.5">Insured Shipments</div><div class="why-text lang-en">Every package is covered. Ship with complete peace of mind knowing your goods are protected from pickup to doorstep.</div><div class="why-text lang-ar" hidden>كل طرد مؤمَّن. اشحن بكل اطمئنان مع العلم أن بضاعتك محمية من الاستلام حتى الباب.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">06</div><div class="why-title" data-i18n="i.why.6">On-Demand Pickup Runs</div><div class="why-text lang-en">Schedule a collection from anywhere in Kuwait. Our dedicated drivers arrive on time so your operations never stall.</div><div class="why-text lang-ar" hidden>جدول استلاماً من أي مكان في الكويت. سائقونا المخصصون يصلون في الموعد حتى لا تتوقف عملياتك.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">07</div><div class="why-title" data-i18n="i.why.7">Competitive Pricing</div><div class="why-text lang-en">Premium service doesn't have to cost a fortune. Flexible pricing models designed to suit every business size.</div><div class="why-text lang-ar" hidden>الخدمة المتميزة لا تكلف ثروة. نماذج تسعير مرنة مصممة لتناسب كل حجم من الأعمال.</div></div></div>
+      <div class="col-lg-3 col-md-6 reveal"><div class="why-card"><div class="why-num">08</div><div class="why-title" data-i18n="i.why.8">Proven Track Record</div><div class="why-text lang-en">8+ years, 500,000+ deliveries, and a 4.9-star average rating. Our results speak louder than any promise.</div><div class="why-text lang-ar" hidden>أكثر من ٨ سنوات، وأكثر من ٥٠٠,٠٠٠ توصيلة، وتقييم متوسط ٤.٩ نجوم. نتائجنا تتحدث بصوت أعلى من أي وعد.</div></div></div>
     </div>
   </div>
 </section>
@@ -350,18 +363,20 @@
   <div class="container">
     <div class="row g-5 align-items-center">
       <div class="col-lg-6 reveal-l">
-        <div class="section-badge on-dark">Full State Coverage</div>
-        <h2 class="section-title on-dark">Every Governorate.<br>Every Neighbourhood.<br><span class="gold-text">Every Door.</span></h2>
-        <p class="section-subtitle on-dark mb-4">Azhaljack is the only consumer delivery company in Kuwait with verified active coverage across all six governorates — not just the urban centres.</p>
+        <div class="section-badge on-dark" data-i18n="i.cov.badge">Full State Coverage</div>
+        <h2 class="section-title on-dark lang-en">Every Governorate.<br>Every Neighbourhood.<br><span class="gold-text">Every Door.</span></h2>
+        <h2 class="section-title on-dark lang-ar" hidden>كل محافظة.<br>كل حي.<br><span class="gold-text">كل باب.</span></h2>
+        <p class="section-subtitle on-dark mb-4 lang-en">Azhaljack is the only consumer delivery company in Kuwait with verified active coverage across all six governorates — not just the urban centres.</p>
+        <p class="section-subtitle on-dark mb-4 lang-ar" hidden>أزهال جاك هي الشركة الوحيدة للتوصيل في الكويت ذات تغطية نشطة موثقة عبر المحافظات الست — ليس فقط المراكز الحضرية.</p>
         <div class="row g-3 mb-4">
-          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Capital Governorate</div></div></div>
-          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Hawalli Governorate</div></div></div>
-          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Farwaniya Governorate</div></div></div>
-          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Ahmadi Governorate</div></div></div>
-          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Jahra Governorate</div></div></div>
-          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name">Mubarak Al-Kabeer</div></div></div>
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name" data-i18n="i.gov.1">Capital Governorate</div></div></div>
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name" data-i18n="i.gov.2">Hawalli Governorate</div></div></div>
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name" data-i18n="i.gov.3">Farwaniya Governorate</div></div></div>
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name" data-i18n="i.gov.4">Ahmadi Governorate</div></div></div>
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name" data-i18n="i.gov.5">Jahra Governorate</div></div></div>
+          <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name" data-i18n="i.gov.6">Mubarak Al-Kabeer</div></div></div>
         </div>
-        <a href="{{ url_for('userroutes.contact') }}" class="btn-gold">Start Delivering Nationwide</a>
+        <a href="{{ url_for('userroutes.contact') }}" class="btn-gold" data-i18n="btn.nationwide">Start Delivering Nationwide</a>
       </div>
       <div class="col-lg-6 reveal-r d-flex justify-content-center">
         <div style="position:relative;width:100%;max-width:440px;">
@@ -374,31 +389,24 @@
             </defs>
             <ellipse cx="160" cy="130" rx="140" ry="115" fill="url(#mapglow)"/>
             <path d="M82 65 L112 42 L178 38 L218 58 L235 95 L240 148 L222 196 L190 218 L145 228 L98 218 L68 186 L52 145 L57 100 Z" fill="rgba(26,58,107,.35)" stroke="rgba(201,168,76,.45)" stroke-width="1.5" stroke-dasharray="6 4"/>
-            <!-- Capital -->
             <circle cx="158" cy="118" r="14" fill="rgba(201,168,76,.12)" stroke="rgba(201,168,76,.0)" stroke-width="1"><animate attributeName="r" values="14;22;14" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0;.8" dur="2s" repeatCount="indefinite"/></circle>
             <circle cx="158" cy="118" r="8" fill="rgba(201,168,76,.9)"/>
             <text x="164" y="113" font-family="sans-serif" font-size="8" fill="rgba(201,168,76,.95)" font-weight="700">Kuwait City</text>
-            <!-- Hawalli -->
             <circle cx="188" cy="140" r="7" fill="rgba(201,168,76,.6)"><animate attributeName="opacity" values=".6;.15;.6" dur="2.3s" repeatCount="indefinite"/></circle>
             <circle cx="188" cy="140" r="4" fill="rgba(201,168,76,.85)"/>
             <text x="195" y="138" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,.75)">Hawalli</text>
-            <!-- Farwaniya -->
             <circle cx="130" cy="145" r="7" fill="rgba(201,168,76,.6)"><animate attributeName="opacity" values=".6;.2;.6" dur="1.9s" repeatCount="indefinite"/></circle>
             <circle cx="130" cy="145" r="4" fill="rgba(201,168,76,.85)"/>
             <text x="100" y="143" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,.75)">Farwaniya</text>
-            <!-- Ahmadi -->
             <circle cx="178" cy="178" r="7" fill="rgba(201,168,76,.6)"><animate attributeName="opacity" values=".6;.15;.6" dur="2.6s" repeatCount="indefinite"/></circle>
             <circle cx="178" cy="178" r="4" fill="rgba(201,168,76,.85)"/>
             <text x="184" y="176" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,.75)">Ahmadi</text>
-            <!-- Jahra -->
             <circle cx="96" cy="128" r="7" fill="rgba(201,168,76,.6)"><animate attributeName="opacity" values=".6;.2;.6" dur="2.1s" repeatCount="indefinite"/></circle>
             <circle cx="96" cy="128" r="4" fill="rgba(201,168,76,.85)"/>
             <text x="70" y="126" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,.75)">Jahra</text>
-            <!-- Mubarak -->
             <circle cx="200" cy="162" r="7" fill="rgba(201,168,76,.6)"><animate attributeName="opacity" values=".6;.15;.6" dur="2.4s" repeatCount="indefinite"/></circle>
             <circle cx="200" cy="162" r="4" fill="rgba(201,168,76,.85)"/>
             <text x="206" y="160" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,.7)">Mubarak</text>
-            <!-- Route lines -->
             <line x1="158" y1="118" x2="188" y2="140" stroke="rgba(201,168,76,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
             <line x1="158" y1="118" x2="130" y2="145" stroke="rgba(201,168,76,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
             <line x1="158" y1="118" x2="96" y2="128" stroke="rgba(201,168,76,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
@@ -407,8 +415,8 @@
             <line x1="130" y1="145" x2="178" y2="178" stroke="rgba(201,168,76,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
           </svg>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:1rem;">
-            <div class="consult-stat-card"><div class="consult-stat-num">6/6</div><div class="consult-stat-lbl">Governorates</div></div>
-            <div class="consult-stat-card"><div class="consult-stat-num">99%</div><div class="consult-stat-lbl">On-Time</div></div>
+            <div class="consult-stat-card"><div class="consult-stat-num">6/6</div><div class="consult-stat-lbl" data-i18n="i.stat.govs">Governorates</div></div>
+            <div class="consult-stat-card"><div class="consult-stat-num">99%</div><div class="consult-stat-lbl" data-i18n="i.hstat.rate">On-Time</div></div>
             <div class="consult-stat-card"><div class="consult-stat-num">18m</div><div class="consult-stat-lbl">Avg. ETA</div></div>
           </div>
         </div>
@@ -421,8 +429,9 @@
 <section class="bg-dark-alt">
   <div class="container">
     <div class="section-center mb-5 reveal">
-      <div class="section-badge">Client Voices</div>
-      <h2 class="section-title">What Kuwait's <span class="gold-text">Top Businesses</span> Say</h2>
+      <div class="section-badge" data-i18n="i.testi.badge">Client Voices</div>
+      <h2 class="section-title lang-en">What Kuwait's <span class="gold-text">Top Businesses</span> Say</h2>
+      <h2 class="section-title lang-ar" hidden>ما يقوله <span class="gold-text">كبار أعمال الكويت</span></h2>
     </div>
     <div class="row g-4">
       <div class="col-md-4 reveal">
@@ -461,13 +470,15 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-8 mb-4 mb-lg-0 reveal-l">
-        <div class="section-badge" style="background:rgba(15,45,84,.12);border-color:rgba(15,45,84,.25);color:rgba(15,45,84,.7);">Start Today</div>
-        <h2 class="cta-title">Ready to Ship Smarter?<br>Kuwait Awaits Your Delivery.</h2>
-        <p class="cta-sub">Join 5,000+ businesses that trust Azhaljack to move what matters most. Get your first delivery quote in under 60 seconds.</p>
+        <div class="section-badge" style="background:rgba(15,45,84,.12);border-color:rgba(15,45,84,.25);color:rgba(15,45,84,.7);" data-i18n="i.cta.badge">Start Today</div>
+        <h2 class="cta-title lang-en">Ready to Ship Smarter?<br>Kuwait Awaits Your Delivery.</h2>
+        <h2 class="cta-title lang-ar" hidden>مستعد للشحن بذكاء؟<br>الكويت تنتظر توصيلتك.</h2>
+        <p class="cta-sub lang-en">Join 5,000+ businesses that trust Azhaljack to move what matters most. Get your first delivery quote in under 60 seconds.</p>
+        <p class="cta-sub lang-ar" hidden>انضم إلى أكثر من ٥,٠٠٠ شركة تثق بأزهال جاك. احصل على عرض أسعارك الأول في أقل من ٦٠ ثانية.</p>
       </div>
       <div class="col-lg-4 text-lg-end d-flex flex-column gap-3 align-items-lg-end reveal-r">
-        <a href="{{ url_for('userroutes.contact') }}" class="btn-dark">Get a Free Quote</a>
-        <a href="tel:+965XXXXXXXX" class="btn-dark"><i class="bi bi-telephone-fill me-2"></i>Call Now</a>
+        <a href="{{ url_for('userroutes.contact') }}" class="btn-dark" data-i18n="btn.free-quote">Get a Free Quote</a>
+        <a href="tel:+96596600674" class="btn-dark"><i class="bi bi-telephone-fill me-2"></i><span data-i18n="btn.call">Call Now</span></a>
       </div>
     </div>
   </div>

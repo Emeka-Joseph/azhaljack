@@ -9,9 +9,11 @@
       <li class="breadcrumb-item"><a href="{{ url_for('userroutes.index') }}">Home</a></li>
       <li class="breadcrumb-item active">FAQ</li>
     </ol></nav>
-    <div class="section-badge">Got Questions?</div>
-    <h1 class="page-hero-title">Frequently Asked<br><span class="gold-text">Questions</span></h1>
-    <p class="page-hero-sub">Everything you need to know about Azhaljack Logistic Services — answered clearly and honestly.</p>
+    <div class="section-badge" data-i18n="f.hero.badge">Got Questions?</div>
+    <h1 class="page-hero-title lang-en">Frequently Asked<br><span class="gold-text">Questions</span></h1>
+    <h1 class="page-hero-title lang-ar" hidden>الأسئلة<br><span class="gold-text">الشائعة</span></h1>
+    <p class="page-hero-sub lang-en">Everything you need to know about Azhaljack Logistic Services — answered clearly and honestly.</p>
+    <p class="page-hero-sub lang-ar" hidden>كل ما تحتاج معرفته عن أزهال جاك للخدمات اللوجستية — مجاب عليه بوضوح وأمانة.</p>
   </div>
 </div>
 
@@ -21,7 +23,7 @@
       <div class="col-lg-8">
 
         <!-- General -->
-        <div class="faq-cat-badge">General</div>
+        <div class="faq-cat-badge" data-i18n="f.cat.general">General</div>
         <div class="accordion faq-accordion mb-5" id="faqGeneral">
           <div class="accordion-item">
             <h2 class="accordion-header">
@@ -127,7 +129,7 @@
         </div>-->
 
         <!-- Pricing & COD -->
-        <div class="faq-cat-badge">Pricing & Payments</div>
+        <div class="faq-cat-badge" data-i18n="f.cat.pricing">Pricing & Payments</div>
         <div class="accordion faq-accordion mb-5" id="faqPricing">
           <div class="accordion-item">
             <h2 class="accordion-header">
@@ -213,9 +215,11 @@
       <!-- Sidebar -->
       <div class="col-lg-4 reveal-r">
         <div class="contact-info-card sticky-top" style="top:100px;">
-          <div class="section-badge mb-3">Still Have Questions?</div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:.75rem;">We're here to help.</h4>
-          <p style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-bottom:2rem;">Our support team responds within 2 business hours. Reach us through any of the channels below.</p>
+          <div class="section-badge mb-3" data-i18n="f.sidebar.badge">Still Have Questions?</div>
+          <h4 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:.75rem;" class="lang-en">We're here to help.</h4>
+          <h4 class="lang-ar" hidden style="font-family:'Cairo',serif;font-size:1.3rem;font-weight:700;margin-bottom:.75rem;">نحن هنا للمساعدة.</h4>
+          <p class="lang-en" style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-bottom:2rem;">Our support team responds within 2 business hours. Reach us through any of the channels below.</p>
+          <p class="lang-ar" hidden style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-bottom:2rem;">فريق الدعم لدينا يرد خلال ساعتي عمل. تواصل معنا عبر أي من القنوات أدناه.</p>
           <div class="cinfo-item">
             <div class="cinfo-icon"><i class="bi bi-telephone-fill"></i></div>
             <div>

@@ -9,9 +9,11 @@
       <li class="breadcrumb-item"><a href="{{ url_for('userroutes.index') }}">Home</a></li>
       <li class="breadcrumb-item active">Contact</li>
     </ol></nav>
-    <div class="section-badge">Let's Talk</div>
-    <h1 class="page-hero-title">Get in Touch with<br><span class="gold-text">Kuwait's Best</span></h1>
-    <p class="page-hero-sub">A real human answers every message. We respond within 2 business hours — because your time is as valuable as your delivery.</p>
+    <div class="section-badge" data-i18n="c.hero.badge">Let's Talk</div>
+    <h1 class="page-hero-title lang-en">Get in Touch with<br><span class="gold-text">Kuwait's Best</span></h1>
+    <h1 class="page-hero-title lang-ar" hidden>تواصل مع<br><span class="gold-text">الأفضل في الكويت</span></h1>
+    <p class="page-hero-sub lang-en">A real human answers every message. We respond within 2 business hours — because your time is as valuable as your delivery.</p>
+    <p class="page-hero-sub lang-ar" hidden>إنسان حقيقي يجيب على كل رسالة. نرد خلال ساعتي عمل — لأن وقتك بقيمة توصيلتك.</p>
   </div>
 </div>
 
@@ -23,25 +25,25 @@
       <div class="col-md-4 reveal">
         <a href="tel:+96596600674" class="why-card text-center p-4 d-block text-decoration-none" style="transition:all .3s;">
           <div class="feat-icon mx-auto mb-3" style="width:52px;height:52px;"><i class="bi bi-telephone-fill" style="font-size:1.2rem;"></i></div>
-          <div style="font-weight:700;color:var(--white);margin-bottom:.25rem;">Call Us</div>
+          <div style="font-weight:700;color:var(--white);margin-bottom:.25rem;" data-i18n="c.pill.call">Call Us</div>
           <div style="color:var(--gold);font-size:.9rem;">+965 966 00674</div>
-          <div style="color:var(--text-muted);font-size:.78rem;margin-top:.3rem;">Sat–Thu, 7 AM – 10 PM</div>
+          <div style="color:var(--text-muted);font-size:.78rem;margin-top:.3rem;" data-i18n="c.pill.call.sub">Sat–Thu, 7 AM – 10 PM</div>
         </a>
       </div>
       <div class="col-md-4 reveal">
         <a href="https://wa.me/96597105654" target="_blank" rel="noopener" class="why-card text-center p-4 d-block text-decoration-none" style="transition:all .3s;">
           <div class="feat-icon mx-auto mb-3" style="width:52px;height:52px;"><i class="bi bi-whatsapp" style="font-size:1.2rem;"></i></div>
-          <div style="font-weight:700;color:var(--white);margin-bottom:.25rem;">WhatsApp</div>
+          <div style="font-weight:700;color:var(--white);margin-bottom:.25rem;" data-i18n="c.pill.wa">WhatsApp</div>
           <div style="color:var(--gold);font-size:.9rem;">+965 971 05654</div>
-          <div style="color:var(--text-muted);font-size:.78rem;margin-top:.3rem;">Fastest response channel</div>
+          <div style="color:var(--text-muted);font-size:.78rem;margin-top:.3rem;" data-i18n="c.pill.wa.sub">Fastest response channel</div>
         </a>
       </div>
       <div class="col-md-4 reveal">
         <a href="mailto:info@azhaljack.com" class="why-card text-center p-4 d-block text-decoration-none" style="transition:all .3s;">
           <div class="feat-icon mx-auto mb-3" style="width:52px;height:52px;"><i class="bi bi-envelope-fill" style="font-size:1.2rem;"></i></div>
-          <div style="font-weight:700;color:var(--white);margin-bottom:.25rem;">Email Us</div>
+          <div style="font-weight:700;color:var(--white);margin-bottom:.25rem;" data-i18n="c.pill.email">Email Us</div>
           <div style="color:var(--gold);font-size:.9rem;">info@azhaljack.com</div>
-          <div style="color:var(--text-muted);font-size:.78rem;margin-top:.3rem;">Response within 2 hours</div>
+          <div style="color:var(--text-muted);font-size:.78rem;margin-top:.3rem;" data-i18n="c.pill.email.sub">Response within 2 hours</div>
         </a>
       </div>
     </div>
@@ -52,14 +54,15 @@
       <!-- Contact Info -->
       <div class="col-lg-5 reveal-l">
         <div class="contact-info-card h-100">
-          <div class="section-badge">Contact Information</div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:.5rem;">We're at Your Service</h3>
-          <p style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-bottom:2rem;">Whether you're ready to start shipping or just exploring your options — our team is ready to guide you every step of the way.</p>
+          <div class="section-badge" data-i18n="c.info.badge">Contact Information</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:.5rem;" data-i18n="c.info.heading">We're at Your Service</h3>
+          <p class="lang-en" style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-bottom:2rem;">Whether you're ready to start shipping or just exploring your options — our team is ready to guide you every step of the way.</p>
+          <p class="lang-ar" hidden style="color:var(--text-muted);font-size:.88rem;line-height:1.7;margin-bottom:2rem;">سواء كنت مستعداً للشحن أو تستكشف خياراتك — فريقنا جاهز لإرشادك في كل خطوة.</p>
 
           <div class="cinfo-item">
             <div class="cinfo-icon"><i class="bi bi-geo-alt-fill"></i></div>
             <div>
-              <div class="cinfo-label">Head Office</div>
+              <div class="cinfo-label" data-i18n="c.info.office.lbl">Head Office</div>
               <div class="cinfo-value">
                 Kuwait City — Sharq<br>
                 Al-Shuhada Street, Tower 50<br>
@@ -70,29 +73,30 @@
           <div class="cinfo-item">
             <div class="cinfo-icon"><i class="bi bi-telephone-fill"></i></div>
             <div>
-              <div class="cinfo-label">Main Line</div>
+              <div class="cinfo-label" data-i18n="c.info.phone.lbl">Main Line</div>
               <div class="cinfo-value"><a href="tel:+96596600674" style="color:inherit;text-decoration:none;">+965 966 00674</a></div>
             </div>
           </div>
           <div class="cinfo-item">
             <div class="cinfo-icon"><i class="bi bi-whatsapp"></i></div>
             <div>
-              <div class="cinfo-label">WhatsApp Business</div>
+              <div class="cinfo-label" data-i18n="c.info.wa.lbl">WhatsApp Business</div>
               <div class="cinfo-value"><a href="https://wa.me/96597105654" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">+965 971 05654</a></div>
             </div>
           </div>
           <div class="cinfo-item">
             <div class="cinfo-icon"><i class="bi bi-envelope-fill"></i></div>
             <div>
-              <div class="cinfo-label">General Enquiries</div>
+              <div class="cinfo-label" data-i18n="c.info.email.lbl">General Enquiries</div>
               <div class="cinfo-value"><a href="mailto:info@azhaljack.com" style="color:inherit;text-decoration:none;">info@azhaljack.com</a></div>
             </div>
           </div>
           <div class="cinfo-item mb-0">
             <div class="cinfo-icon"><i class="bi bi-clock-fill"></i></div>
             <div>
-              <div class="cinfo-label">Business Hours</div>
-              <div class="cinfo-value">Saturday – Thursday<br>7:00 AM – 10:00 PM</div>
+              <div class="cinfo-label" data-i18n="c.info.hours.lbl">Business Hours</div>
+              <div class="cinfo-value lang-en">Saturday – Thursday<br>7:00 AM – 10:00 PM</div>
+              <div class="cinfo-value lang-ar" hidden>السبت – الخميس<br>٧:٠٠ ص – ١٠:٠٠ م</div>
             </div>
           </div>
 
@@ -108,7 +112,7 @@
           <a href="https://www.google.com/maps/search/?api=1&query=Al-Shuhada+Street+Tower+50+Sharq+Kuwait+City+Kuwait"
              target="_blank" rel="noopener"
              class="btn-gold w-100 d-flex align-items-center justify-content-center gap-2 mt-3">
-            <i class="bi bi-map-fill"></i> Get Directions
+            <i class="bi bi-map-fill"></i> <span data-i18n="btn.directions">Get Directions</span>
           </a>
         </div>
       </div>
@@ -123,11 +127,11 @@
               <i class="bi bi-telephone-fill"></i>
             </div>
             <div class="contact-action-body">
-              <div class="contact-action-label">Direct Line</div>
+              <div class="contact-action-label" data-i18n="c.action.call.lbl">Direct Line</div>
               <div class="contact-action-number">+965 966 00674</div>
               <p class="contact-action-desc">Speak directly with our operations team. Available Saturday through Thursday, 7 AM to 10 PM. We pick up — every time.</p>
               <a href="tel:+96596600674" class="btn-gold d-inline-flex align-items-center gap-2">
-                <i class="bi bi-telephone-fill"></i> Call Now
+                <i class="bi bi-telephone-fill"></i> <span data-i18n="btn.call">Call Now</span>
               </a>
             </div>
           </div>
@@ -138,11 +142,11 @@
               <i class="bi bi-whatsapp"></i>
             </div>
             <div class="contact-action-body">
-              <div class="contact-action-label">WhatsApp Business</div>
+              <div class="contact-action-label" data-i18n="c.action.wa.lbl">WhatsApp Business</div>
               <div class="contact-action-number">+965 971 05654</div>
               <p class="contact-action-desc">Our fastest channel — send a message and get a reply in minutes. Perfect for quick quotes, delivery updates, and partnership enquiries.</p>
               <a href="https://wa.me/96597105654" target="_blank" rel="noopener" class="btn-gold d-inline-flex align-items-center gap-2">
-                <i class="bi bi-whatsapp"></i> Open WhatsApp
+                <i class="bi bi-whatsapp"></i> <span data-i18n="btn.whatsapp">Open WhatsApp</span>
               </a>
             </div>
           </div>
@@ -153,11 +157,11 @@
               <i class="bi bi-envelope-fill"></i>
             </div>
             <div class="contact-action-body">
-              <div class="contact-action-label">Email</div>
+              <div class="contact-action-label" data-i18n="c.action.email.lbl">Email</div>
               <div class="contact-action-number">info@azhaljack.com</div>
               <p class="contact-action-desc">For detailed enquiries, partnership proposals, or documentation — drop us an email and we'll respond within 2 business hours.</p>
               <a href="mailto:info@azhaljack.com" class="btn-gold d-inline-flex align-items-center gap-2">
-                <i class="bi bi-envelope-fill"></i> Send Email
+                <i class="bi bi-envelope-fill"></i> <span data-i18n="btn.email">Send Email</span>
               </a>
             </div>
           </div>
@@ -172,9 +176,11 @@
 <section class="bg-dark-alt" style="padding:4rem 0;">
   <div class="container">
     <div class="section-center reveal">
-      <div class="section-badge">Follow Us</div>
-      <h2 class="section-title" style="margin-bottom:.75rem;">Stay Connected with<br><span class="gold-text">Azhaljack</span></h2>
-      <p class="section-subtitle mb-4">Follow us for delivery tips, service updates, Kuwait logistics news, and exclusive client offers.</p>
+      <div class="section-badge" data-i18n="c.follow.badge">Follow Us</div>
+      <h2 class="section-title lang-en" style="margin-bottom:.75rem;">Stay Connected with<br><span class="gold-text">Azhaljack</span></h2>
+      <h2 class="section-title lang-ar" hidden style="margin-bottom:.75rem;">ابقَ على تواصل مع<br><span class="gold-text">أزهال جاك</span></h2>
+      <p class="section-subtitle mb-4 lang-en">Follow us for delivery tips, service updates, Kuwait logistics news, and exclusive client offers.</p>
+      <p class="section-subtitle mb-4 lang-ar" hidden>تابعنا للحصول على نصائح التوصيل وتحديثات الخدمة وأخبار اللوجستيات في الكويت وعروض حصرية للعملاء.</p>
       <div class="d-flex justify-content-center gap-3 flex-wrap">
         <a href="#" class="btn-outline-gold d-flex align-items-center gap-2"><i class="bi bi-instagram"></i> Instagram</a>
         <a href="#" class="btn-outline-gold d-flex align-items-center gap-2"><i class="bi bi-twitter-x"></i> Twitter / X</a>
