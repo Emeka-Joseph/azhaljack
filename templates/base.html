@@ -14,7 +14,7 @@
 
 <!-- PRELOADER -->
 <div id="preloader">
-  <div class="preloader-logo">AZHALJACK</div>
+  <img src="{{ url_for('static', filename='images/logo.avif') }}" alt="Azhaljack" class="preloader-logo" style="height:80px;width:auto;object-fit:contain;-webkit-text-fill-color:unset;background:none;">
   <div class="preloader-bar"><div class="preloader-fill"></div></div>
 </div>
 
@@ -22,7 +22,7 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="{{ url_for('userroutes.index') }}">
-      <div class="brand-icon">AJ</div>
+      <img src="{{ url_for('static', filename='images/logo.avif') }}" alt="Azhaljack Logo" class="brand-logo-img">
       <div class="brand-name">Azhaljack<span>Logistic Services · Kuwait</span></div>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
     <div class="row g-5">
       <div class="col-lg-4">
         <a class="navbar-brand mb-3 d-inline-flex" href="{{ url_for('userroutes.index') }}">
-          <div class="brand-icon">AJ</div>
+          <img src="{{ url_for('static', filename='images/logo.avif') }}" alt="Azhaljack Logo" class="brand-logo-img">
           <div class="brand-name ms-2">Azhaljack<span>Logistic Services · Kuwait</span></div>
         </a>
         <p class="footer-desc">Kuwait's undisputed leader in consumer delivery — setting the gold standard for speed, reliability, and excellence across the State of Kuwait.</p>
