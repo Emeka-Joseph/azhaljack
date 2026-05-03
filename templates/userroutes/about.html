@@ -20,50 +20,13 @@
 <section class="bg-white" style="padding:4rem 0 0;">
   <div class="container">
     <div class="mosaic-grid">
-      <!-- Tall card: Fleet on the road -->
-      <div class="img-card reveal-l" style="background:linear-gradient(160deg,#0F2D54,#1A3A6B);">
-        <div class="img-card-inner">
-          <div class="img-pattern"></div>
-          <svg viewBox="0 0 200 420" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
-            <rect x="0" y="360" width="200" height="60" fill="rgba(255,255,255,.03)"/>
-            <line x1="10" y1="382" x2="45" y2="382" stroke="rgba(201,168,76,.2)" stroke-width="1.5" stroke-dasharray="14 10"/>
-            <line x1="80" y1="382" x2="115" y2="382" stroke="rgba(201,168,76,.2)" stroke-width="1.5" stroke-dasharray="14 10"/>
-            <line x1="150" y1="382" x2="185" y2="382" stroke="rgba(201,168,76,.2)" stroke-width="1.5" stroke-dasharray="14 10"/>
-            <rect x="15" y="290" width="125" height="68" rx="5" fill="rgba(26,58,107,.9)" stroke="rgba(201,168,76,.4)" stroke-width="1.5"/>
-            <path d="M140 308 L172 308 L184 325 L184 358 L140 358 Z" fill="rgba(15,45,84,.95)" stroke="rgba(201,168,76,.3)" stroke-width="1.5"/>
-            <path d="M144 312 L168 312 L177 323 L177 340 L144 340 Z" fill="rgba(201,168,76,.1)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
-            <text x="25" y="314" font-family="serif" font-weight="900" font-size="10" fill="white">AZHALJACK</text>
-            <text x="30" y="325" font-family="sans-serif" font-size="6" fill="rgba(201,168,76,.9)" letter-spacing="1.5">LOGISTICS · KW</text>
-            <rect x="15" y="342" width="125" height="3.5" fill="rgba(201,168,76,.5)"/>
-            <circle cx="48" cy="366" r="13" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.5)" stroke-width="1.5"/>
-            <circle cx="48" cy="366" r="7" fill="rgba(201,168,76,.4)"/>
-            <circle cx="115" cy="366" r="13" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.5)" stroke-width="1.5"/>
-            <circle cx="115" cy="366" r="7" fill="rgba(201,168,76,.4)"/>
-            <circle cx="164" cy="366" r="11" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.5)" stroke-width="1.5"/>
-            <circle cx="164" cy="366" r="6" fill="rgba(201,168,76,.4)"/>
-            <line x1="0" y1="310" x2="12" y2="310" stroke="rgba(201,168,76,.4)" stroke-width="2" stroke-linecap="round"/>
-            <line x1="0" y1="320" x2="14" y2="320" stroke="rgba(201,168,76,.2)" stroke-width="1.5" stroke-linecap="round"/>
-            <!-- Second truck, further away -->
-            <rect x="30" y="190" width="90" height="50" rx="4" fill="rgba(26,58,107,.7)" stroke="rgba(201,168,76,.25)" stroke-width="1"/>
-            <path d="M120 202 L146 202 L154 215 L154 240 L120 240 Z" fill="rgba(15,45,84,.8)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
-            <text x="38" y="210" font-family="serif" font-weight="700" font-size="7.5" fill="rgba(255,255,255,.8)">AZHALJACK</text>
-            <rect x="30" y="228" width="90" height="2.5" fill="rgba(201,168,76,.4)"/>
-            <circle cx="52" cy="244" r="9" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.45)" stroke-width="1.5"/>
-            <circle cx="100" cy="244" r="9" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.45)" stroke-width="1.5"/>
-            <circle cx="138" cy="244" r="7" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.45)" stroke-width="1.5"/>
-            <!-- Third truck, smallest / farthest -->
-            <rect x="50" y="120" width="58" height="32" rx="3" fill="rgba(26,58,107,.55)" stroke="rgba(201,168,76,.15)" stroke-width="1"/>
-            <circle cx="68" cy="155" r="7" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.35)" stroke-width="1"/>
-            <circle cx="98" cy="155" r="7" fill="rgba(10,22,40,.9)" stroke="rgba(201,168,76,.35)" stroke-width="1"/>
-            <!-- Sky / road scene -->
-            <rect x="0" y="0" width="200" height="115" fill="rgba(29,78,216,.06)"/>
-            <ellipse cx="100" cy="50" rx="70" ry="30" fill="rgba(201,168,76,.04)"/>
-            <circle cx="162" cy="30" r="22" fill="rgba(201,168,76,.08)" stroke="rgba(201,168,76,.12)" stroke-width="1"/>
-            <circle cx="162" cy="30" r="14" fill="rgba(201,168,76,.12)"/>
-            <!-- GPS pings in sky -->
-            <circle cx="80" cy="40" r="3" fill="rgba(201,168,76,.6)"><animate attributeName="r" values="3;8;3" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0;.6" dur="3s" repeatCount="indefinite"/></circle>
-            <circle cx="80" cy="40" r="2" fill="rgba(201,168,76,.9)"/>
-          </svg>
+      <!-- Tall card: Fleet photos 2×2 grid -->
+      <div class="img-card reveal-l" style="background:#060E1F;">
+        <div class="img-card-inner fleet-photo-grid" style="padding:0;overflow:hidden;">
+          <img src="{{ url_for('static', filename='images/geely1.jpg') }}" alt="Azhaljack Fleet">
+          <img src="{{ url_for('static', filename='images/geely2.png') }}" alt="Azhaljack Fleet">
+          <img src="{{ url_for('static', filename='images/geely3.jpg') }}" alt="Azhaljack Fleet">
+          <img src="{{ url_for('static', filename='images/cherry1.jpg') }}" alt="Azhaljack Fleet">
         </div>
         <div class="img-card-overlay">
           <div class="img-card-badge">Our Fleet</div>
@@ -72,96 +35,174 @@
         </div>
       </div>
 
-      <!-- Top right: Warehouse -->
-      <div class="img-card reveal-r" style="background:linear-gradient(145deg,#1A3A6B,#0A1628);">
+      <!-- Top right: Pickup Chain Network -->
+      <div class="img-card reveal-r" style="background:linear-gradient(145deg,#0A1628,#1A3A6B);">
         <div class="img-card-inner">
           <div class="img-pattern"></div>
           <svg viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
-            <rect x="8" y="30" width="244" height="160" rx="3" fill="rgba(10,22,40,.5)"/>
-            <rect x="8" y="30" width="2" height="160" fill="rgba(201,168,76,.3)"/>
-            <rect x="250" y="30" width="2" height="160" fill="rgba(201,168,76,.3)"/>
-            <!-- shelves -->
-            <rect x="14" y="44" width="66" height="2.5" rx="1" fill="rgba(201,168,76,.45)"/><rect x="14" y="66" width="66" height="2.5" rx="1" fill="rgba(201,168,76,.45)"/><rect x="14" y="88" width="66" height="2.5" rx="1" fill="rgba(201,168,76,.45)"/>
-            <rect x="14" y="44" width="2" height="100" fill="rgba(201,168,76,.3)"/><rect x="80" y="44" width="2" height="100" fill="rgba(201,168,76,.3)"/>
-            <rect x="18" y="33" width="18" height="11" rx="2" fill="rgba(26,58,107,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
-            <rect x="40" y="35" width="22" height="9" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.25)" stroke-width="1"/>
-            <rect x="64" y="33" width="12" height="11" rx="2" fill="rgba(26,58,107,.8)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
-            <rect x="18" y="47" width="24" height="17" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
-            <rect x="46" y="50" width="16" height="14" rx="2" fill="rgba(26,58,107,.85)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
-            <rect x="64" y="47" width="12" height="17" rx="2" fill="rgba(15,45,84,.75)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
-            <!-- shelf 2 -->
-            <rect x="88" y="44" width="80" height="2.5" rx="1" fill="rgba(201,168,76,.45)"/><rect x="88" y="66" width="80" height="2.5" rx="1" fill="rgba(201,168,76,.45)"/><rect x="88" y="88" width="80" height="2.5" rx="1" fill="rgba(201,168,76,.45)"/>
-            <rect x="88" y="44" width="2" height="100" fill="rgba(201,168,76,.3)"/><rect x="168" y="44" width="2" height="100" fill="rgba(201,168,76,.3)"/>
-            <rect x="92" y="33" width="22" height="11" rx="2" fill="rgba(26,58,107,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
-            <rect x="118" y="36" width="16" height="8" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
-            <rect x="138" y="33" width="24" height="11" rx="2" fill="rgba(26,58,107,.8)" stroke="rgba(201,168,76,.25)" stroke-width="1"/>
-            <rect x="92" y="47" width="18" height="17" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
-            <rect x="114" y="50" width="28" height="14" rx="2" fill="rgba(26,58,107,.85)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
-            <!-- shelf 3 -->
-            <rect x="176" y="44" width="74" height="2.5" rx="1" fill="rgba(201,168,76,.45)"/><rect x="176" y="66" width="74" height="2.5" rx="1" fill="rgba(201,168,76,.45)"/>
-            <rect x="176" y="44" width="2" height="100" fill="rgba(201,168,76,.3)"/><rect x="250" y="44" width="0" height="100" fill="rgba(201,168,76,.3)"/>
-            <rect x="180" y="33" width="20" height="11" rx="2" fill="rgba(26,58,107,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
-            <rect x="204" y="36" width="24" height="8" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
-            <rect x="180" y="47" width="26" height="17" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
-            <rect x="210" y="50" width="18" height="14" rx="2" fill="rgba(26,58,107,.85)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
-            <!-- Ceiling lights -->
-            <circle cx="82" cy="18" r="5" fill="rgba(201,168,76,.5)"/>
-            <ellipse cx="82" cy="22" rx="20" ry="8" fill="rgba(201,168,76,.06)"/>
-            <circle cx="180" cy="18" r="5" fill="rgba(201,168,76,.5)"/>
-            <ellipse cx="180" cy="22" rx="20" ry="8" fill="rgba(201,168,76,.06)"/>
-            <!-- Pallet + boxes -->
-            <rect x="50" y="155" width="55" height="5" rx="1" fill="rgba(201,168,76,.25)"/>
-            <rect x="53" y="140" width="14" height="15" rx="2" fill="rgba(26,58,107,.9)" stroke="rgba(201,168,76,.35)" stroke-width="1"/>
-            <rect x="70" y="143" width="12" height="12" rx="2" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
-            <rect x="85" y="140" width="14" height="15" rx="2" fill="rgba(26,58,107,.85)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+            <!-- Background grid lines -->
+            <line x1="0" y1="50" x2="260" y2="50" stroke="rgba(201,168,76,.05)" stroke-width="1"/>
+            <line x1="0" y1="100" x2="260" y2="100" stroke="rgba(201,168,76,.05)" stroke-width="1"/>
+            <line x1="0" y1="150" x2="260" y2="150" stroke="rgba(201,168,76,.05)" stroke-width="1"/>
+            <line x1="65" y1="0" x2="65" y2="200" stroke="rgba(201,168,76,.05)" stroke-width="1"/>
+            <line x1="130" y1="0" x2="130" y2="200" stroke="rgba(201,168,76,.05)" stroke-width="1"/>
+            <line x1="195" y1="0" x2="195" y2="200" stroke="rgba(201,168,76,.05)" stroke-width="1"/>
+            <!-- Partner pickup nodes at top -->
+            <rect x="8" y="12" width="52" height="30" rx="5" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.5)" stroke-width="1.5"/>
+            <text x="14" y="24" font-family="sans-serif" font-size="5.5" fill="rgba(201,168,76,.95)" font-weight="700">PARTNER A</text>
+            <text x="16" y="34" font-family="sans-serif" font-size="4.5" fill="rgba(255,255,255,.5)">Restaurant</text>
+            <circle cx="34" cy="42" r="3.5" fill="rgba(201,168,76,.8)"><animate attributeName="opacity" values="1;.2;1" dur="1.7s" repeatCount="indefinite"/></circle>
+
+            <rect x="104" y="8" width="52" height="30" rx="5" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.5)" stroke-width="1.5"/>
+            <text x="107" y="20" font-family="sans-serif" font-size="5.5" fill="rgba(201,168,76,.95)" font-weight="700">PARTNER B</text>
+            <text x="112" y="30" font-family="sans-serif" font-size="4.5" fill="rgba(255,255,255,.5)">Supermarket</text>
+            <circle cx="130" cy="38" r="3.5" fill="rgba(201,168,76,.8)"><animate attributeName="opacity" values="1;.2;1" dur="2.1s" repeatCount="indefinite"/></circle>
+
+            <rect x="200" y="12" width="52" height="30" rx="5" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.5)" stroke-width="1.5"/>
+            <text x="205" y="24" font-family="sans-serif" font-size="5.5" fill="rgba(201,168,76,.95)" font-weight="700">PARTNER C</text>
+            <text x="210" y="34" font-family="sans-serif" font-size="4.5" fill="rgba(255,255,255,.5)">Retailer</text>
+            <circle cx="226" cy="42" r="3.5" fill="rgba(201,168,76,.8)"><animate attributeName="opacity" values="1;.2;1" dur="1.5s" repeatCount="indefinite"/></circle>
+
+            <!-- Dashed lines converging to central vehicle -->
+            <line x1="34" y1="42" x2="130" y2="98" stroke="rgba(201,168,76,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
+            <line x1="130" y1="38" x2="130" y2="98" stroke="rgba(201,168,76,.55)" stroke-width="1.5" stroke-dasharray="5 3"/>
+            <line x1="226" y1="42" x2="130" y2="98" stroke="rgba(201,168,76,.4)" stroke-width="1.5" stroke-dasharray="5 3"/>
+
+            <!-- Central branded vehicle -->
+            <rect x="88" y="90" width="84" height="38" rx="6" fill="rgba(10,22,40,.95)" stroke="rgba(201,168,76,.7)" stroke-width="2"/>
+            <rect x="88" y="118" width="84" height="4" rx="2" fill="rgba(201,168,76,.6)"/>
+            <text x="96" y="105" font-family="serif" font-size="9" font-weight="900" fill="white">AZHALJACK</text>
+            <text x="98" y="116" font-family="sans-serif" font-size="5" fill="rgba(201,168,76,.9)" letter-spacing="1.2">FLEET · KUWAIT</text>
+            <circle cx="103" cy="130" r="9" fill="rgba(8,15,30,.95)" stroke="rgba(201,168,76,.6)" stroke-width="1.5"/>
+            <circle cx="103" cy="130" r="5" fill="rgba(201,168,76,.35)"/>
+            <circle cx="103" cy="130" r="2.5" fill="rgba(201,168,76,.9)"/>
+            <circle cx="157" cy="130" r="9" fill="rgba(8,15,30,.95)" stroke="rgba(201,168,76,.6)" stroke-width="1.5"/>
+            <circle cx="157" cy="130" r="5" fill="rgba(201,168,76,.35)"/>
+            <circle cx="157" cy="130" r="2.5" fill="rgba(201,168,76,.9)"/>
+            <!-- Pulse on vehicle -->
+            <circle cx="130" cy="109" r="5" fill="rgba(201,168,76,0)"><animate attributeName="r" values="5;22;5" dur="2.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".5;0;.5" dur="2.8s" repeatCount="indefinite"/></circle>
+
+            <!-- Lines from vehicle to customer doors -->
+            <line x1="100" y1="128" x2="34" y2="162" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="130" y1="128" x2="130" y2="162" stroke="rgba(201,168,76,.45)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="160" y1="128" x2="226" y2="162" stroke="rgba(201,168,76,.35)" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+            <!-- Customer door icons -->
+            <rect x="14" y="162" width="22" height="20" rx="3" fill="rgba(26,58,107,.6)" stroke="rgba(201,168,76,.4)" stroke-width="1.2"/>
+            <rect x="21" y="170" width="8" height="12" rx="1.5" fill="rgba(201,168,76,.45)"/>
+            <circle cx="27" cy="177" r="1.5" fill="rgba(201,168,76,.8)"/>
+            <text x="13" y="190" font-family="sans-serif" font-size="5" fill="rgba(255,255,255,.5)">Customer</text>
+
+            <rect x="119" y="162" width="22" height="20" rx="3" fill="rgba(26,58,107,.6)" stroke="rgba(201,168,76,.4)" stroke-width="1.2"/>
+            <rect x="126" y="170" width="8" height="12" rx="1.5" fill="rgba(201,168,76,.45)"/>
+            <circle cx="132" cy="177" r="1.5" fill="rgba(201,168,76,.8)"/>
+            <text x="118" y="190" font-family="sans-serif" font-size="5" fill="rgba(255,255,255,.5)">Customer</text>
+
+            <rect x="215" y="162" width="22" height="20" rx="3" fill="rgba(26,58,107,.6)" stroke="rgba(201,168,76,.4)" stroke-width="1.2"/>
+            <rect x="222" y="170" width="8" height="12" rx="1.5" fill="rgba(201,168,76,.45)"/>
+            <circle cx="228" cy="177" r="1.5" fill="rgba(201,168,76,.8)"/>
+            <text x="213" y="190" font-family="sans-serif" font-size="5" fill="rgba(255,255,255,.5)">Customer</text>
           </svg>
         </div>
         <div class="img-card-overlay">
-          <div class="img-card-badge">Fulfillment</div>
-          <div class="img-card-title">Climate-Controlled Warehouse</div>
-          <div class="img-card-sub">Kuwait City — secure, organised, scalable</div>
+          <div class="img-card-badge">Pickup Network</div>
+          <div class="img-card-title">Multi-Point Pickup Chains</div>
+          <div class="img-card-sub">From every partner — straight to every door</div>
         </div>
       </div>
 
-      <!-- Bottom right: Technology -->
-      <div class="img-card reveal-r" style="background:linear-gradient(145deg,#060E1F,#1A3A6B);">
+      <!-- Bottom right: Technology Dashboard (sharp redesign) -->
+      <div class="img-card reveal-r" style="background:linear-gradient(145deg,#04091A,#0F2D54);">
         <div class="img-card-inner">
           <div class="img-pattern"></div>
           <svg viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
-            <!-- Dashboard screen -->
-            <rect x="20" y="15" width="220" height="155" rx="10" fill="rgba(26,58,107,.55)" stroke="rgba(201,168,76,.25)" stroke-width="1.5"/>
-            <rect x="25" y="20" width="210" height="145" rx="7" fill="rgba(8,18,36,.85)"/>
-            <!-- Screen header -->
-            <rect x="25" y="20" width="210" height="28" rx="7" fill="rgba(26,58,107,.7)"/>
-            <circle cx="38" cy="34" r="4" fill="rgba(255,80,80,.5)"/>
-            <circle cx="52" cy="34" r="4" fill="rgba(255,185,0,.5)"/>
-            <circle cx="66" cy="34" r="4" fill="rgba(80,200,100,.5)"/>
-            <text x="85" y="38" font-family="sans-serif" font-size="7" fill="rgba(201,168,76,.8)" letter-spacing="1">AZHALJACK LIVE DASHBOARD</text>
-            <!-- Map area -->
-            <rect x="28" y="52" width="130" height="105" rx="5" fill="rgba(13,27,52,.9)"/>
-            <path d="M45 88 L72 70 L96 86 L88 104 L65 110 L50 96 Z" fill="rgba(26,58,107,.5)" stroke="rgba(201,168,76,.25)" stroke-width="1"/>
-            <line x1="52" y1="95" x2="70" y2="76" stroke="rgba(201,168,76,.7)" stroke-width="2" stroke-linecap="round"/>
-            <line x1="70" y1="76" x2="91" y2="88" stroke="rgba(201,168,76,.7)" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="52" cy="95" r="4" fill="var(--gold)" opacity=".9"/>
-            <circle cx="91" cy="88" r="4" fill="#4ECDC4"/>
-            <circle cx="91" cy="88" r="8" fill="rgba(78,205,196,.0)"><animate attributeName="r" values="4;13;4" dur="2s" repeatCount="indefinite"/><animate attributeName="fill" values="rgba(78,205,196,.4);rgba(78,205,196,0);rgba(78,205,196,.4)" dur="2s" repeatCount="indefinite"/></circle>
-            <circle cx="70" cy="76" r="3" fill="rgba(255,255,255,.7)"/>
-            <!-- Stats panel -->
-            <rect x="162" y="52" width="70" height="48" rx="5" fill="rgba(26,58,107,.6)" stroke="rgba(201,168,76,.15)" stroke-width="1"/>
-            <text x="170" y="65" font-family="sans-serif" font-size="6" fill="rgba(201,168,76,.8)" letter-spacing="1">ACTIVE</text>
-            <text x="170" y="78" font-family="serif" font-size="18" font-weight="900" fill="white">247</text>
-            <text x="170" y="90" font-family="sans-serif" font-size="5.5" fill="rgba(255,255,255,.5)">deliveries live</text>
-            <rect x="162" y="106" width="70" height="48" rx="5" fill="rgba(26,58,107,.6)" stroke="rgba(201,168,76,.15)" stroke-width="1"/>
-            <text x="170" y="119" font-family="sans-serif" font-size="6" fill="rgba(201,168,76,.8)" letter-spacing="1">ON-TIME</text>
-            <text x="170" y="132" font-family="serif" font-size="18" font-weight="900" fill="white">99%</text>
-            <text x="170" y="144" font-family="sans-serif" font-size="5.5" fill="rgba(255,255,255,.5)">this month</text>
-            <!-- Mini chart -->
-            <rect x="28" y="162" width="130" height="3" rx="1.5" fill="rgba(255,255,255,.06)"/>
-            <rect x="28" y="162" width="95" height="3" rx="1.5" fill="rgba(201,168,76,.55)"/>
-            <text x="28" y="157" font-family="sans-serif" font-size="5.5" fill="rgba(201,168,76,.7)">Today's progress — 68% completed</text>
-            <!-- Stand -->
-            <rect x="110" y="170" width="40" height="5" rx="2" fill="rgba(201,168,76,.2)"/>
-            <rect x="120" y="155" width="20" height="15" rx="1" fill="rgba(201,168,76,.15)"/>
+            <defs>
+              <linearGradient id="hdrGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#0F2D54"/>
+                <stop offset="100%" stop-color="#1A3A6B"/>
+              </linearGradient>
+              <linearGradient id="barGold" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#C9A84C"/>
+                <stop offset="100%" stop-color="#E8C96D"/>
+              </linearGradient>
+              <linearGradient id="barTeal" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#0D9488"/>
+                <stop offset="100%" stop-color="#2DD4BF"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Screen frame -->
+            <rect x="10" y="8" width="240" height="178" rx="10" fill="rgba(4,9,26,.95)" stroke="rgba(201,168,76,.45)" stroke-width="1.5"/>
+
+            <!-- Header bar -->
+            <rect x="10" y="8" width="240" height="26" rx="10" fill="url(#hdrGrad)"/>
+            <rect x="10" y="24" width="240" height="10" fill="url(#hdrGrad)"/>
+            <circle cx="24" cy="21" r="4" fill="rgba(239,68,68,.7)"/>
+            <circle cx="36" cy="21" r="4" fill="rgba(234,179,8,.7)"/>
+            <circle cx="48" cy="21" r="4" fill="rgba(34,197,94,.7)"/>
+            <text x="62" y="25" font-family="sans-serif" font-size="6.5" fill="rgba(201,168,76,.95)" font-weight="700" letter-spacing=".8">AZHALJACK  ·  LIVE OPS DASHBOARD</text>
+
+            <!-- Left: Map panel -->
+            <rect x="14" y="38" width="144" height="100" rx="6" fill="rgba(6,14,31,.9)" stroke="rgba(201,168,76,.2)" stroke-width="1"/>
+            <!-- Kuwait outline stylized -->
+            <path d="M32 82 L52 62 L80 58 L104 68 L114 90 L108 114 L88 124 L60 122 L38 108 Z" fill="rgba(15,45,84,.55)" stroke="rgba(201,168,76,.3)" stroke-width="1" stroke-dasharray="3 2"/>
+            <!-- Route line 1 -->
+            <polyline points="42,105 62,85 80,78 100,88" stroke="rgba(201,168,76,.85)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Route line 2 -->
+            <polyline points="80,78 90,68 105,72" stroke="rgba(45,212,191,.7)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Node: origin -->
+            <circle cx="42" cy="105" r="5" fill="rgba(201,168,76,.95)"/>
+            <circle cx="42" cy="105" r="10" fill="rgba(201,168,76,0)"><animate attributeName="r" values="5;14;5" dur="2.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0;.7" dur="2.2s" repeatCount="indefinite"/></circle>
+            <!-- Node: mid transit -->
+            <circle cx="80" cy="78" r="4" fill="white" opacity=".85"/>
+            <!-- Node: destination pulsing teal -->
+            <circle cx="100" cy="88" r="5" fill="#2DD4BF"/>
+            <circle cx="100" cy="88" r="5" fill="rgba(45,212,191,0)"><animate attributeName="r" values="5;13;5" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0;.8" dur="1.8s" repeatCount="indefinite"/></circle>
+            <!-- Node: second route end -->
+            <circle cx="105" cy="72" r="3.5" fill="rgba(201,168,76,.7)"><animate attributeName="opacity" values=".7;.2;.7" dur="2.5s" repeatCount="indefinite"/></circle>
+            <!-- Live badge on map -->
+            <rect x="18" y="42" width="44" height="12" rx="3" fill="rgba(239,68,68,.18)" stroke="rgba(239,68,68,.5)" stroke-width="1"/>
+            <circle cx="26" cy="48" r="2.5" fill="rgba(239,68,68,.9)"><animate attributeName="opacity" values="1;.2;1" dur="1s" repeatCount="indefinite"/></circle>
+            <text x="31" y="52" font-family="sans-serif" font-size="5.5" fill="rgba(239,68,68,.95)" font-weight="700" letter-spacing=".5">LIVE  GPS</text>
+            <!-- Map label -->
+            <text x="18" y="132" font-family="sans-serif" font-size="5" fill="rgba(201,168,76,.6)" letter-spacing=".5">STATE OF KUWAIT  —  6 GOVERNORATES</text>
+
+            <!-- Progress bar below map -->
+            <text x="14" y="148" font-family="sans-serif" font-size="5.5" fill="rgba(255,255,255,.5)">Today's runs</text>
+            <text x="130" y="148" font-family="sans-serif" font-size="5.5" fill="rgba(201,168,76,.8)" text-anchor="end">73%</text>
+            <rect x="14" y="150" width="144" height="4" rx="2" fill="rgba(255,255,255,.07)"/>
+            <rect x="14" y="150" width="105" height="4" rx="2" fill="url(#barGold)"/>
+
+            <!-- Right: KPI panels -->
+            <!-- KPI 1: Active -->
+            <rect x="162" y="38" width="84" height="46" rx="6" fill="rgba(15,45,84,.8)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+            <text x="172" y="52" font-family="sans-serif" font-size="5.5" fill="rgba(201,168,76,.8)" letter-spacing=".8">ACTIVE RUNS</text>
+            <text x="172" y="68" font-family="serif" font-size="20" font-weight="900" fill="white">247</text>
+            <text x="172" y="78" font-family="sans-serif" font-size="5" fill="rgba(255,255,255,.4)">drivers on road now</text>
+
+            <!-- KPI 2: On-time -->
+            <rect x="162" y="88" width="84" height="46" rx="6" fill="rgba(13,148,136,.15)" stroke="rgba(45,212,191,.35)" stroke-width="1"/>
+            <text x="172" y="102" font-family="sans-serif" font-size="5.5" fill="rgba(45,212,191,.9)" letter-spacing=".8">ON-TIME RATE</text>
+            <text x="172" y="118" font-family="serif" font-size="20" font-weight="900" fill="white">99%</text>
+            <text x="172" y="128" font-family="sans-serif" font-size="5" fill="rgba(255,255,255,.4)">rolling 30 days</text>
+
+            <!-- Mini bar chart: deliveries by hour -->
+            <rect x="162" y="138" width="84" height="48" rx="6" fill="rgba(4,9,26,.7)" stroke="rgba(201,168,76,.18)" stroke-width="1"/>
+            <text x="168" y="150" font-family="sans-serif" font-size="5.5" fill="rgba(201,168,76,.7)" letter-spacing=".5">HOURLY RUNS</text>
+            <!-- bars -->
+            <rect x="168" y="172" width="7" height="14" rx="1.5" fill="rgba(201,168,76,.3)"/>
+            <rect x="178" y="166" width="7" height="20" rx="1.5" fill="rgba(201,168,76,.5)"/>
+            <rect x="188" y="160" width="7" height="26" rx="1.5" fill="url(#barGold)"/>
+            <rect x="198" y="163" width="7" height="23" rx="1.5" fill="url(#barGold)"/>
+            <rect x="208" y="168" width="7" height="18" rx="1.5" fill="rgba(201,168,76,.45)"/>
+            <rect x="218" y="172" width="7" height="14" rx="1.5" fill="rgba(201,168,76,.3)"/>
+            <rect x="228" y="170" width="7" height="16" rx="1.5" fill="rgba(201,168,76,.4)"/>
+
+            <!-- Bottom status strip -->
+            <rect x="10" y="158" width="240" height="28" rx="0" fill="rgba(10,22,40,.6)"/>
+            <rect x="10" y="180" width="240" height="6" rx="0" fill="rgba(10,22,40,.6)"/>
+            <circle cx="24" cy="172" r="3" fill="rgba(34,197,94,.85)"><animate attributeName="opacity" values="1;.3;1" dur="1.2s" repeatCount="indefinite"/></circle>
+            <text x="31" y="175" font-family="sans-serif" font-size="5.5" fill="rgba(255,255,255,.6)">System operational  ·  Last sync: just now  ·  AJ-OPS v3.1</text>
           </svg>
         </div>
         <div class="img-card-overlay">
