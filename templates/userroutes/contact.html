@@ -5,15 +5,92 @@
 
 <div class="page-hero">
   <div class="container">
-    <nav aria-label="breadcrumb"><ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ url_for('userroutes.index') }}">Home</a></li>
-      <li class="breadcrumb-item active">Contact</li>
-    </ol></nav>
-    <div class="section-badge" data-i18n="c.hero.badge">Let's Talk</div>
-    <h1 class="page-hero-title lang-en">Get in Touch with<br><span class="gold-text">Kuwait's Best</span></h1>
-    <h1 class="page-hero-title lang-ar" hidden>تواصل مع<br><span class="gold-text">الأفضل في الكويت</span></h1>
-    <p class="page-hero-sub lang-en">A real human answers every message. We respond within 2 business hours — because your time is as valuable as your delivery.</p>
-    <p class="page-hero-sub lang-ar" hidden>إنسان حقيقي يجيب على كل رسالة. نرد خلال ساعتي عمل — لأن وقتك بقيمة توصيلتك.</p>
+    <div class="page-hero-inner">
+      <div class="page-hero-text">
+        <nav aria-label="breadcrumb"><ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ url_for('userroutes.index') }}">Home</a></li>
+          <li class="breadcrumb-item active">Contact</li>
+        </ol></nav>
+        <div class="section-badge" data-i18n="c.hero.badge">Let's Talk</div>
+        <h1 class="page-hero-title lang-en">Get in Touch with<br><span class="gold-text">Kuwait's Best</span></h1>
+        <h1 class="page-hero-title lang-ar" hidden>تواصل مع<br><span class="gold-text">الأفضل في الكويت</span></h1>
+        <p class="page-hero-sub lang-en">A real human answers every message. We respond within 2 business hours — because your time is as valuable as your delivery.</p>
+        <p class="page-hero-sub lang-ar" hidden>إنسان حقيقي يجيب على كل رسالة. نرد خلال ساعتي عمل — لأن وقتك بقيمة توصيلتك.</p>
+      </div>
+      <div class="page-hero-graphic">
+        <div class="page-hero-gfx">
+          <!-- CONTACT: Communication Hub (location pin + 3 channels) -->
+          <svg viewBox="0 0 400 270" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+            <rect width="400" height="270" rx="18" fill="rgba(6,14,31,.96)" stroke="rgba(201,168,76,.22)" stroke-width="1.5"/>
+            <!-- top badge -->
+            <rect x="140" y="13" width="120" height="22" rx="11" fill="rgba(201,168,76,.12)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+            <text x="200" y="28" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(201,168,76,.92)" text-anchor="middle" font-weight="700" letter-spacing="1">GET IN TOUCH</text>
+            <!-- decorative grid (faint) -->
+            <line x1="0" y1="90" x2="400" y2="90" stroke="rgba(201,168,76,.04)" stroke-width="1"/>
+            <line x1="0" y1="145" x2="400" y2="145" stroke="rgba(201,168,76,.04)" stroke-width="1"/>
+            <line x1="0" y1="200" x2="400" y2="200" stroke="rgba(201,168,76,.04)" stroke-width="1"/>
+            <line x1="100" y1="0" x2="100" y2="270" stroke="rgba(201,168,76,.04)" stroke-width="1"/>
+            <line x1="200" y1="0" x2="200" y2="270" stroke="rgba(201,168,76,.04)" stroke-width="1"/>
+            <line x1="300" y1="0" x2="300" y2="270" stroke="rgba(201,168,76,.04)" stroke-width="1"/>
+            <!-- dashed lines from center pin to each channel card -->
+            <!-- center (200,130) to phone card top-right (118,88) -->
+            <path d="M188,116 Q165,106 118,95" stroke="rgba(201,168,76,.28)" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+            <!-- center (200,130) to WA card top-left (282,88) -->
+            <path d="M212,116 Q235,106 282,95" stroke="rgba(37,211,102,.22)" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+            <!-- center (200,130) to email card top (200,194) -->
+            <line x1="200" y1="152" x2="200" y2="190" stroke="rgba(201,168,76,.28)" stroke-width="1" stroke-dasharray="3 3"/>
+            <!-- Phone card (top-left) -->
+            <rect x="14" y="58" width="128" height="62" rx="10" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.32)" stroke-width="1.2"/>
+            <!-- phone handset icon -->
+            <path d="M30,72 C30,68 33,65 37,65 L43,70 C45,72 45,74 43,76 L42,77 C43,81 47,85 51,87 L52,86 C54,84 56,84 58,86 L63,91 C65,93 63,97 59,97 C50,96 28,80 30,72" fill="none" stroke="rgba(201,168,76,.72)" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+            <text x="82" y="76" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,.5)">Direct Line</text>
+            <text x="82" y="90" font-family="Inter,sans-serif" font-size="9" fill="rgba(201,168,76,.92)" font-weight="600">+965 966 00674</text>
+            <text x="82" y="103" font-family="Inter,sans-serif" font-size="6.5" fill="rgba(255,255,255,.35)">Sat–Thu · 7AM–10PM</text>
+            <!-- WhatsApp card (top-right) -->
+            <rect x="258" y="58" width="128" height="62" rx="10" fill="rgba(7,94,84,.55)" stroke="rgba(37,211,102,.32)" stroke-width="1.2"/>
+            <!-- WhatsApp bubble icon (speech bubble circle) -->
+            <circle cx="280" cy="82" r="14" fill="none" stroke="rgba(37,211,102,.68)" stroke-width="1.4"/>
+            <circle cx="276" cy="86" r="3" fill="rgba(37,211,102,.65)"/>
+            <circle cx="280" cy="86" r="3" fill="rgba(37,211,102,.65)"/>
+            <circle cx="284" cy="86" r="3" fill="rgba(37,211,102,.65)"/>
+            <path d="M274,96 L270,104 L278,99" fill="rgba(37,211,102,.45)" stroke="rgba(37,211,102,.5)" stroke-width="0.8" stroke-linejoin="round"/>
+            <text x="308" y="76" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,.5)">WhatsApp</text>
+            <text x="308" y="90" font-family="Inter,sans-serif" font-size="9" fill="rgba(37,211,102,.92)" font-weight="600">+965 971 05654</text>
+            <text x="308" y="103" font-family="Inter,sans-serif" font-size="6.5" fill="rgba(255,255,255,.35)">Fastest channel</text>
+            <!-- Central location pin (200, 130) -->
+            <circle cx="200" cy="122" r="24" fill="rgba(15,45,84,.94)" stroke="#C9A84C" stroke-width="2"/>
+            <!-- office building icon inside pin -->
+            <rect x="189" y="112" width="22" height="20" rx="1" fill="none" stroke="rgba(201,168,76,.72)" stroke-width="1.4"/>
+            <rect x="189" y="112" width="22" height="6" rx="1" fill="rgba(201,168,76,.22)"/>
+            <rect x="193" y="121" width="5" height="11" rx="1" fill="rgba(201,168,76,.38)"/>
+            <rect x="202" y="121" width="5" height="11" rx="1" fill="rgba(201,168,76,.38)"/>
+            <!-- pin tail -->
+            <path d="M196,146 Q200,156 204,146" fill="#C9A84C"/>
+            <!-- pulse rings -->
+            <circle cx="200" cy="122" r="24" fill="none" stroke="rgba(201,168,76,.32)" stroke-width="1.5">
+              <animate attributeName="r" values="24;44;24" dur="2.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values=".32;0;.32" dur="2.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="200" cy="122" r="24" fill="none" stroke="rgba(201,168,76,.14)" stroke-width="1">
+              <animate attributeName="r" values="24;66;24" dur="2.2s" begin="0.8s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values=".14;0;.14" dur="2.2s" begin="0.8s" repeatCount="indefinite"/>
+            </circle>
+            <!-- location label -->
+            <text x="200" y="165" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.6)" text-anchor="middle" font-weight="600">Sharq · Kuwait City</text>
+            <!-- Email card (bottom center) -->
+            <rect x="92" y="190" width="216" height="58" rx="10" fill="rgba(160,131,42,.18)" stroke="rgba(201,168,76,.38)" stroke-width="1.2"/>
+            <!-- envelope icon -->
+            <rect x="110" y="207" width="24" height="17" rx="2" fill="none" stroke="rgba(201,168,76,.72)" stroke-width="1.4"/>
+            <polyline points="110,207 122,217 134,207" fill="none" stroke="rgba(201,168,76,.72)" stroke-width="1.4"/>
+            <text x="150" y="210" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,.5)">Email</text>
+            <text x="150" y="223" font-family="Inter,sans-serif" font-size="9.5" fill="rgba(201,168,76,.92)" font-weight="600">info@azhaljack.com</text>
+            <text x="150" y="237" font-family="Inter,sans-serif" font-size="6.5" fill="rgba(255,255,255,.35)">Response within 2 business hours</text>
+            <!-- bottom label -->
+            <text x="200" y="263" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,.15)" text-anchor="middle" letter-spacing="2">AZHALJACK · SHARQ · KUWAIT CITY</text>
+          </svg>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

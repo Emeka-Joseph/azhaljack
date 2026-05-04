@@ -5,15 +5,84 @@
 
 <div class="page-hero">
   <div class="container">
-    <nav aria-label="breadcrumb"><ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ url_for('userroutes.index') }}">Home</a></li>
-      <li class="breadcrumb-item active">Our Team</li>
-    </ol></nav>
-    <div class="section-badge" data-i18n="t.hero.badge">The People Behind the Excellence</div>
-    <h1 class="page-hero-title lang-en">Meet the Leaders<br><span class="gold-text">Driving Kuwait Forward</span></h1>
-    <h1 class="page-hero-title lang-ar" hidden>تعرف على القادة<br><span class="gold-text">الذين يقودون الكويت للأمام</span></h1>
-    <p class="page-hero-sub lang-en">Three exceptional individuals united by one obsession: making Azhaljack Logistic Services the best delivery company Kuwait has ever seen.</p>
-    <p class="page-hero-sub lang-ar" hidden>ثلاثة أفراد استثنائيون يجمعهم هاجس واحد: جعل أزهال جاك للخدمات اللوجستية أفضل شركة توصيل رأتها الكويت على الإطلاق.</p>
+    <div class="page-hero-inner">
+      <div class="page-hero-text">
+        <nav aria-label="breadcrumb"><ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ url_for('userroutes.index') }}">Home</a></li>
+          <li class="breadcrumb-item active">Our Team</li>
+        </ol></nav>
+        <div class="section-badge" data-i18n="t.hero.badge">The People Behind the Excellence</div>
+        <h1 class="page-hero-title lang-en">Meet the Leaders<br><span class="gold-text">Driving Kuwait Forward</span></h1>
+        <h1 class="page-hero-title lang-ar" hidden>تعرف على القادة<br><span class="gold-text">الذين يقودون الكويت للأمام</span></h1>
+        <p class="page-hero-sub lang-en">Three exceptional individuals united by one obsession: making Azhaljack Logistic Services the best delivery company Kuwait has ever seen.</p>
+        <p class="page-hero-sub lang-ar" hidden>ثلاثة أفراد استثنائيون يجمعهم هاجس واحد: جعل أزهال جاك للخدمات اللوجستية أفضل شركة توصيل رأتها الكويت على الإطلاق.</p>
+      </div>
+      <div class="page-hero-graphic">
+        <div class="page-hero-gfx">
+          <!-- TEAM: Leadership Constellation (3 nodes + center hub) -->
+          <svg viewBox="0 0 400 270" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+            <rect width="400" height="270" rx="18" fill="rgba(6,14,31,.96)" stroke="rgba(201,168,76,.22)" stroke-width="1.5"/>
+            <!-- top badge -->
+            <rect x="128" y="13" width="144" height="22" rx="11" fill="rgba(201,168,76,.12)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+            <text x="200" y="28" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(201,168,76,.92)" text-anchor="middle" font-weight="700" letter-spacing="1">LEADERSHIP TEAM</text>
+            <!-- orbital rings (decorative) -->
+            <circle cx="200" cy="148" r="48" stroke="rgba(201,168,76,.07)" stroke-width="1" fill="none"/>
+            <circle cx="200" cy="148" r="80" stroke="rgba(201,168,76,.04)" stroke-width="1" fill="none"/>
+            <!-- connecting lines (center to nodes) -->
+            <!-- center → CEO (top, 200,50) -->
+            <line x1="200" y1="118" x2="200" y2="76" stroke="rgba(201,168,76,.32)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <!-- center → Ops (bottom-left, 84,232) -->
+            <line x1="175" y1="163" x2="108" y2="210" stroke="rgba(201,168,76,.32)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <!-- center → HR (bottom-right, 316,232) -->
+            <line x1="225" y1="163" x2="292" y2="210" stroke="rgba(201,168,76,.32)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <!-- animated dots travelling along connecting lines -->
+            <circle r="3.5" fill="rgba(201,168,76,.85)">
+              <animateMotion dur="1.8s" repeatCount="indefinite" path="M200,118 L200,76"/>
+            </circle>
+            <circle r="3.5" fill="rgba(201,168,76,.85)">
+              <animateMotion dur="2.2s" repeatCount="indefinite" path="M175,163 L108,210"/>
+            </circle>
+            <circle r="3.5" fill="rgba(201,168,76,.85)">
+              <animateMotion dur="2s" repeatCount="indefinite" path="M225,163 L292,210"/>
+            </circle>
+            <!-- Central hub -->
+            <circle cx="200" cy="148" r="36" fill="rgba(15,45,84,.92)" stroke="rgba(201,168,76,.55)" stroke-width="2"/>
+            <!-- subtle pulse ring -->
+            <circle cx="200" cy="148" r="36" fill="none" stroke="rgba(201,168,76,.2)" stroke-width="1.5">
+              <animate attributeName="r" values="36;52;36" dur="3s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values=".2;0;.2" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <!-- AJ monogram -->
+            <text x="200" y="143" font-family="Playfair Display,serif" font-size="22" fill="#C9A84C" text-anchor="middle" font-weight="700">AJ</text>
+            <text x="200" y="156" font-family="Inter,sans-serif" font-size="5.5" fill="rgba(255,255,255,.45)" text-anchor="middle" letter-spacing="2">AZHALJACK</text>
+            <!-- CEO node (top center) -->
+            <circle cx="200" cy="55" r="26" fill="rgba(15,45,84,.92)" stroke="rgba(201,168,76,.52)" stroke-width="2"/>
+            <!-- person icon (head + shoulders) -->
+            <circle cx="200" cy="48" r="7.5" fill="none" stroke="rgba(201,168,76,.72)" stroke-width="1.5"/>
+            <path d="M185,68 Q185,58 200,58 Q215,58 215,68" fill="none" stroke="rgba(201,168,76,.72)" stroke-width="1.5"/>
+            <text x="200" y="91" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.72)" text-anchor="middle" font-weight="600">CEO</text>
+            <!-- Ops Manager node (bottom-left) -->
+            <circle cx="84" cy="228" r="24" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.45)" stroke-width="1.8"/>
+            <!-- truck icon -->
+            <rect x="72" y="222" width="20" height="11" rx="2" fill="none" stroke="rgba(201,168,76,.7)" stroke-width="1.3"/>
+            <rect x="85" y="224" width="9" height="9" rx="1" fill="none" stroke="rgba(201,168,76,.55)" stroke-width="1.1"/>
+            <circle cx="75" cy="234" r="3" fill="none" stroke="rgba(201,168,76,.65)" stroke-width="1"/>
+            <circle cx="87" cy="234" r="3" fill="none" stroke="rgba(201,168,76,.65)" stroke-width="1"/>
+            <text x="84" y="260" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,.62)" text-anchor="middle" font-weight="600">OPERATIONS</text>
+            <!-- HR Officer node (bottom-right) -->
+            <circle cx="316" cy="228" r="24" fill="rgba(15,45,84,.9)" stroke="rgba(201,168,76,.45)" stroke-width="1.8"/>
+            <!-- people icon (two overlapping persons) -->
+            <circle cx="310" cy="221" r="5.5" fill="none" stroke="rgba(201,168,76,.68)" stroke-width="1.3"/>
+            <circle cx="322" cy="221" r="5.5" fill="none" stroke="rgba(201,168,76,.68)" stroke-width="1.3"/>
+            <path d="M300,234 Q300,228 310,228 Q320,228 320,234" fill="none" stroke="rgba(201,168,76,.6)" stroke-width="1.3"/>
+            <path d="M312,234 Q312,228 322,228 Q332,228 332,234" fill="none" stroke="rgba(201,168,76,.6)" stroke-width="1.3"/>
+            <text x="316" y="260" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,.62)" text-anchor="middle" font-weight="600">HR &amp; PEOPLE</text>
+            <!-- bottom label -->
+            <text x="200" y="270" font-family="Inter,sans-serif" font-size="7" fill="rgba(201,168,76,.3)" text-anchor="middle" letter-spacing="2">3 LEADERS · 1 VISION · KUWAIT</text>
+          </svg>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

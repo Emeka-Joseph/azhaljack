@@ -336,6 +336,12 @@ section{padding:6rem 0;}
 .breadcrumb-item.active{color:rgba(255,255,255,.5);}
 .breadcrumb-item+.breadcrumb-item::before{color:rgba(255,255,255,.3);}
 .page-hero .section-badge{background:rgba(201,168,76,.12);border-color:rgba(201,168,76,.3);color:var(--gold-light);position:relative;z-index:1;}
+.page-hero-inner{display:flex;align-items:center;gap:3rem;position:relative;z-index:1;}
+.page-hero-text{flex:0 0 52%;max-width:52%;}
+.page-hero-graphic{flex:1;display:flex;align-items:center;justify-content:flex-end;}
+.page-hero-gfx{width:100%;max-width:420px;border-radius:18px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.45),0 0 0 1px rgba(201,168,76,.18);}
+@media(max-width:991px){.page-hero-inner{flex-direction:column;gap:2rem;}.page-hero-text{flex:none;max-width:100%;width:100%;}.page-hero-graphic{width:100%;justify-content:center;}.page-hero-gfx{max-width:340px;}}
+@media(max-width:575px){.page-hero-graphic{display:none;}}
 
 /* ── FOOTER ── */
 footer{background:var(--sapphire);border-top:1px solid rgba(201,168,76,.15);padding:5rem 0 2rem;}

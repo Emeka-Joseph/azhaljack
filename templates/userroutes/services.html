@@ -5,15 +5,105 @@
 
 <div class="page-hero">
   <div class="container">
-    <nav aria-label="breadcrumb"><ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ url_for('userroutes.index') }}">Home</a></li>
-      <li class="breadcrumb-item active">Our Services</li>
-    </ol></nav>
-    <div class="section-badge" data-i18n="s.hero.badge">What We Offer</div>
-    <h1 class="page-hero-title lang-en">Logistics Services<br><span class="gold-text">Engineered for Kuwait</span></h1>
-    <h1 class="page-hero-title lang-ar" hidden>خدمات لوجستية<br><span class="gold-text">مصممة للكويت</span></h1>
-    <p class="page-hero-sub lang-en">Every service we offer is purpose-built for the unique demands of the Kuwaiti consumer market — fast, reliable, and built to scale.</p>
-    <p class="page-hero-sub lang-ar" hidden>كل خدمة نقدمها مصممة خصيصاً للمتطلبات الفريدة لسوق المستهلكين الكويتي — سريعة، موثوقة، وقابلة للتوسع.</p>
+    <div class="page-hero-inner">
+      <div class="page-hero-text">
+        <nav aria-label="breadcrumb"><ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ url_for('userroutes.index') }}">Home</a></li>
+          <li class="breadcrumb-item active">Our Services</li>
+        </ol></nav>
+        <div class="section-badge" data-i18n="s.hero.badge">What We Offer</div>
+        <h1 class="page-hero-title lang-en">Logistics Services<br><span class="gold-text">Engineered for Kuwait</span></h1>
+        <h1 class="page-hero-title lang-ar" hidden>خدمات لوجستية<br><span class="gold-text">مصممة للكويت</span></h1>
+        <p class="page-hero-sub lang-en">Every service we offer is purpose-built for the unique demands of the Kuwaiti consumer market — fast, reliable, and built to scale.</p>
+        <p class="page-hero-sub lang-ar" hidden>كل خدمة نقدمها مصممة خصيصاً للمتطلبات الفريدة لسوق المستهلكين الكويتي — سريعة، موثوقة، وقابلة للتوسع.</p>
+      </div>
+      <div class="page-hero-graphic">
+        <div class="page-hero-gfx">
+          <!-- SERVICES: Delivery Pipeline (Merchant → Truck → Customer) -->
+          <svg viewBox="0 0 400 270" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+            <rect width="400" height="270" rx="18" fill="rgba(6,14,31,.96)" stroke="rgba(201,168,76,.22)" stroke-width="1.5"/>
+            <!-- top badge -->
+            <rect x="130" y="13" width="140" height="22" rx="11" fill="rgba(201,168,76,.12)" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+            <text x="200" y="28" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(201,168,76,.92)" text-anchor="middle" font-weight="700" letter-spacing="1">DELIVERY PIPELINE</text>
+            <!-- stage labels -->
+            <text x="58" y="57" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.35)" text-anchor="middle" letter-spacing="0.5">ORIGIN</text>
+            <text x="200" y="57" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.35)" text-anchor="middle" letter-spacing="0.5">IN TRANSIT</text>
+            <text x="342" y="57" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.35)" text-anchor="middle" letter-spacing="0.5">DELIVERED</text>
+            <!-- Merchant card (left) -->
+            <rect x="10" y="66" width="96" height="84" rx="10" fill="rgba(15,45,84,.88)" stroke="rgba(201,168,76,.32)" stroke-width="1.2"/>
+            <!-- Package icon (drawn) -->
+            <rect x="30" y="80" width="52" height="38" rx="3" fill="none" stroke="rgba(201,168,76,.68)" stroke-width="1.5"/>
+            <line x1="30" y1="95" x2="82" y2="95" stroke="rgba(201,168,76,.35)" stroke-width="1"/>
+            <line x1="56" y1="80" x2="56" y2="95" stroke="rgba(201,168,76,.35)" stroke-width="1"/>
+            <rect x="42" y="87" width="28" height="6" rx="2" fill="rgba(201,168,76,.28)"/>
+            <!-- blinking live dot -->
+            <circle cx="96" cy="70" r="4.5" fill="rgba(201,168,76,.85)">
+              <animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/>
+            </circle>
+            <text x="58" y="138" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.55)" text-anchor="middle">MERCHANT</text>
+            <!-- dashed route line: merchant → truck -->
+            <path d="M106,100 Q118,100 126,125" stroke="rgba(201,168,76,.38)" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+            <!-- speed lines (motion effect left of truck) -->
+            <line x1="108" y1="138" x2="122" y2="138" stroke="rgba(201,168,76,.25)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="110" y1="146" x2="121" y2="146" stroke="rgba(201,168,76,.18)" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="112" y1="153" x2="120" y2="153" stroke="rgba(201,168,76,.12)" stroke-width="1" stroke-dasharray="3 3"/>
+            <!-- TRUCK (center, facing right) -->
+            <!-- Cargo body -->
+            <rect x="126" y="118" width="114" height="48" rx="4" fill="rgba(15,45,84,.96)" stroke="rgba(201,168,76,.52)" stroke-width="1.5"/>
+            <!-- Cab -->
+            <rect x="240" y="123" width="36" height="43" rx="4" fill="rgba(8,18,38,.98)" stroke="rgba(201,168,76,.42)" stroke-width="1.2"/>
+            <!-- Windscreen -->
+            <rect x="243" y="126" width="26" height="18" rx="2" fill="rgba(255,255,255,.07)" stroke="rgba(201,168,76,.22)" stroke-width="1"/>
+            <!-- Front bumper/grille -->
+            <rect x="276" y="150" width="5" height="12" rx="1" fill="rgba(201,168,76,.45)"/>
+            <!-- Gold brand stripe along cargo bottom -->
+            <rect x="126" y="154" width="114" height="5" rx="0" fill="rgba(201,168,76,.62)"/>
+            <!-- Brand name on cargo -->
+            <text x="183" y="144" font-family="Inter,sans-serif" font-size="9" fill="rgba(201,168,76,.82)" text-anchor="middle" font-weight="700" letter-spacing="1.2">AZHALJACK</text>
+            <!-- Wheels -->
+            <circle cx="157" cy="173" r="13" fill="rgba(3,6,14,.95)" stroke="rgba(201,168,76,.5)" stroke-width="2"/>
+            <circle cx="157" cy="173" r="5.5" fill="rgba(201,168,76,.22)"/>
+            <circle cx="223" cy="173" r="13" fill="rgba(3,6,14,.95)" stroke="rgba(201,168,76,.5)" stroke-width="2"/>
+            <circle cx="223" cy="173" r="5.5" fill="rgba(201,168,76,.22)"/>
+            <circle cx="258" cy="173" r="11" fill="rgba(3,6,14,.95)" stroke="rgba(201,168,76,.42)" stroke-width="1.8"/>
+            <circle cx="258" cy="173" r="4.5" fill="rgba(201,168,76,.18)"/>
+            <!-- GPS pin above truck -->
+            <circle cx="183" cy="99" r="7.5" fill="rgba(15,45,84,.9)" stroke="#C9A84C" stroke-width="1.8"/>
+            <circle cx="183" cy="99" r="3" fill="#C9A84C"/>
+            <line x1="183" y1="107" x2="183" y2="117" stroke="rgba(201,168,76,.4)" stroke-width="1" stroke-dasharray="2 2"/>
+            <!-- GPS pulse -->
+            <circle cx="183" cy="99" r="7.5" fill="none" stroke="rgba(201,168,76,.5)" stroke-width="1.5">
+              <animate attributeName="r" values="8;22;8" dur="2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values=".8;0;.8" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <!-- dashed route line: truck → customer -->
+            <path d="M281,130 Q292,107 294,107" stroke="rgba(201,168,76,.38)" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+            <!-- Customer card (right) -->
+            <rect x="294" y="66" width="96" height="84" rx="10" fill="rgba(15,45,84,.88)" stroke="rgba(201,168,76,.32)" stroke-width="1.2"/>
+            <!-- House/home icon -->
+            <polygon points="342,78 320,96 364,96" fill="none" stroke="rgba(201,168,76,.68)" stroke-width="1.5" stroke-linejoin="round"/>
+            <rect x="328" y="96" width="28" height="22" rx="1" fill="none" stroke="rgba(201,168,76,.68)" stroke-width="1.5"/>
+            <rect x="336" y="105" width="12" height="13" rx="1" fill="rgba(201,168,76,.28)"/>
+            <!-- green delivered dot -->
+            <circle cx="382" cy="70" r="4.5" fill="rgba(52,211,153,.75)">
+              <animate attributeName="opacity" values="1;.35;1" dur="1.9s" repeatCount="indefinite"/>
+            </circle>
+            <text x="342" y="138" font-family="Inter,sans-serif" font-size="7.5" fill="rgba(255,255,255,.55)" text-anchor="middle">CUSTOMER</text>
+            <!-- bottom stat chips -->
+            <rect x="10" y="200" width="118" height="36" rx="9" fill="rgba(15,45,84,.75)" stroke="rgba(201,168,76,.22)" stroke-width="1"/>
+            <text x="69" y="214" font-family="Inter,sans-serif" font-size="14" fill="#C9A84C" text-anchor="middle" font-weight="700">99%</text>
+            <text x="69" y="228" font-family="Inter,sans-serif" font-size="6.5" fill="rgba(255,255,255,.45)" text-anchor="middle">On-Time Rate</text>
+            <rect x="138" y="200" width="124" height="36" rx="9" fill="rgba(15,45,84,.75)" stroke="rgba(201,168,76,.22)" stroke-width="1"/>
+            <text x="200" y="214" font-family="Inter,sans-serif" font-size="14" fill="#C9A84C" text-anchor="middle" font-weight="700">18 min</text>
+            <text x="200" y="228" font-family="Inter,sans-serif" font-size="6.5" fill="rgba(255,255,255,.45)" text-anchor="middle">Avg. Delivery</text>
+            <rect x="272" y="200" width="118" height="36" rx="9" fill="rgba(15,45,84,.75)" stroke="rgba(201,168,76,.22)" stroke-width="1"/>
+            <text x="331" y="214" font-family="Inter,sans-serif" font-size="14" fill="#C9A84C" text-anchor="middle" font-weight="700">6/6</text>
+            <text x="331" y="228" font-family="Inter,sans-serif" font-size="6.5" fill="rgba(255,255,255,.45)" text-anchor="middle">Governorates</text>
+            <text x="200" y="258" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,.15)" text-anchor="middle" letter-spacing="2.5">POWERED BY AZHALJACK · KUWAIT</text>
+          </svg>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
