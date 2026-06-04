@@ -509,3 +509,265 @@ html[dir="rtl"] .step-title,html[dir="rtl"] .step-text{text-align:center;}
 
 /* Lang toggle button font */
 html[dir="rtl"] .lang-toggle-btn{font-family:'Cairo',sans-serif;}
+
+/* ══ PARTNERS MARQUEE ══ */
+.partners-strip {
+  padding: 4rem 0 3rem;
+  background: var(--white);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+.partners-track-outer {
+  overflow: hidden;
+  position: relative;
+  padding: .75rem 0;
+}
+.partners-track-outer::before,
+.partners-track-outer::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+.partners-track-outer::before { left: 0;  background: linear-gradient(to right, #fff 40%, transparent); }
+.partners-track-outer::after  { right: 0; background: linear-gradient(to left,  #fff 40%, transparent); }
+
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  width: max-content;
+  animation: partners-scroll 30s linear infinite;
+}
+.partners-track:hover { animation-play-state: paused; }
+
+@keyframes partners-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.partner-card {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.1rem 2.25rem;
+  border-radius: 16px;
+  border: 1.5px solid;
+  min-width: 210px;
+  height: 96px;
+  background: #fff;
+  transition: transform .25s, box-shadow .25s;
+  cursor: default;
+  user-select: none;
+}
+@media (min-width: 992px) {
+  .partner-card {
+    min-width: 250px;
+    height: 110px;
+    padding: 1.25rem 2.75rem;
+    gap: 1.2rem;
+  }
+}
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.1);
+}
+.partner-logo-img {
+  max-width: 64px;
+  max-height: 54px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  filter: grayscale(15%);
+  transition: filter .25s;
+}
+@media (min-width: 992px) {
+  .partner-logo-img {
+    max-width: 76px;
+    max-height: 64px;
+  }
+}
+.partner-card:hover .partner-logo-img {
+  filter: grayscale(0%);
+}
+.partner-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  letter-spacing: -.3px;
+  line-height: 1.2;
+  color: var(--dark-text);
+}
+@media (min-width: 992px) {
+  .partner-label { font-size: 1.05rem; }
+}
+
+/* ══ FLEET HERO SLIDER ══ */
+.fleet-hero-wrap {
+  width: 100%;
+  max-width: 540px;
+}
+.fleet-hero-slider {
+  position: relative;
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 28px 72px rgba(0,0,0,.45);
+  aspect-ratio: 4 / 3;
+  background: #060e1f;
+}
+.fleet-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .9s ease;
+  z-index: 1;
+}
+.fleet-hero-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+.fleet-hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.fleet-hero-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 10;
+  padding: 1.5rem 1.4rem 1rem;
+  background: linear-gradient(to top, rgba(6,14,31,.95) 0%, rgba(6,14,31,.5) 60%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.fleet-slide-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+.fleet-slide-sub {
+  font-size: .72rem;
+  color: rgba(255,255,255,.6);
+  margin-top: .2rem;
+  font-family: 'Inter', sans-serif;
+}
+.fleet-live-badge {
+  background: rgba(201,168,76,.15);
+  border: 1px solid rgba(201,168,76,.45);
+  color: #C9A84C;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: .3rem .75rem;
+  border-radius: 20px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.fleet-hero-dots {
+  position: absolute;
+  bottom: 4.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: .5rem;
+}
+.fleet-hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.35);
+  border: none;
+  cursor: pointer;
+  transition: background .3s, transform .3s;
+  padding: 0;
+}
+.fleet-hero-dot.active {
+  background: #C9A84C;
+  transform: scale(1.3);
+}
+@media (min-width: 992px) {
+  .fleet-hero-wrap { max-width: 580px; }
+  .fleet-slide-name { font-size: 1.1rem; }
+  .fleet-hero-dots { bottom: 5rem; }
+}
+
+/* ══ MOBILE IMPROVEMENTS — iPhone 12 (390 px) and up ══ */
+
+/* --- tablet + stacked hero (≤ 991 px) --- */
+@media (max-width: 991px) {
+  /* Push hero content clear of the fixed navbar once columns stack */
+  .hero {
+    padding-top: 5.5rem;
+    padding-bottom: 3rem;
+    align-items: flex-start;
+  }
+  /* Horizontal step connectors make no sense in 2-col / stacked layout */
+  .process-step:not(:last-child)::after { display: none; }
+}
+
+/* --- large phone / landscape phone (≤ 767 px) --- */
+@media (max-width: 767px) {
+  /* Tighter hero stats */
+  .hero-stats { gap: 1.25rem; }
+  /* Shorter Kuwait-map preview box in homepage about strip */
+  .about-img-box { height: 300px; }
+  /* Section vertical rhythm */
+  section { padding: 3.5rem 0; }
+  .stats-strip { padding: 2.25rem 0; }
+  .cta-section { padding: 3.5rem 0; }
+  /* Inner-page hero — reduce top padding from 10rem to 8rem */
+  .page-hero { padding: 8rem 0 3.5rem; }
+  /* Fleet slider — lift dots above the caption gradient */
+  .fleet-hero-dots { bottom: 5rem; }
+  /* FAQ section breathing room */
+  .faq-accordion .accordion-button { font-size: .88rem; }
+  /* Testimonial quote mark smaller */
+  .testi-quote { font-size: 2.4rem; }
+}
+
+/* --- small phone — iPhone SE, narrow Android (≤ 480 px) --- */
+@media (max-width: 480px) {
+  .hero { padding-top: 5rem; padding-bottom: 2rem; }
+  section { padding: 3rem 0; }
+  .stats-strip { padding: 2rem 0; }
+  .cta-section { padding: 3rem 0; }
+  .page-hero { padding: 7.5rem 0 3rem; }
+  /* Partner cards: scale down for very narrow viewports */
+  .partner-card {
+    min-width: 172px;
+    height: 82px;
+    padding: .85rem 1.4rem;
+    gap: .7rem;
+  }
+  .partner-logo-img { max-width: 50px; max-height: 42px; }
+  .partner-label { font-size: .88rem; }
+  /* Fleet slider dots */
+  .fleet-hero-dots { bottom: 4.5rem; }
+  /* Tighter section headings */
+  .section-title { font-size: clamp(1.55rem, 6vw, 2.9rem); }
+  /* Stat number sizes */
+  .stat-num { font-size: 2rem; }
+  .hero-stat-num { font-size: 1.7rem; }
+  /* Why-card padding */
+  .why-card { padding: 1.5rem; }
+  /* Service card padding */
+  .svc-card { padding: 2rem 1.5rem; }
+  /* Team card padding */
+  .team-card { padding: 2rem 1.5rem; }
+  /* Buttons — full width on very small screens */
+  .hero-btns .btn-gold,
+  .hero-btns .btn-outline-gold { width: 100%; text-align: center; }
+}

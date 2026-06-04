@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+﻿{% extends 'base.html' %}
 {% block title %}About Us — Azhaljack Logistic Services Kuwait{% endblock %}
 
 {% block content %}
@@ -9,7 +9,7 @@
     <div class="page-hero-inner">
       <div class="page-hero-text">
         <nav aria-label="breadcrumb"><ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{ url_for('userroutes.index') }}">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ url_for('user.index') }}">Home</a></li>
           <li class="breadcrumb-item active">About Us</li>
         </ol></nav>
         <div class="section-badge" data-i18n="a.hero.badge">Our Story</div>
@@ -84,13 +84,16 @@
 <section class="bg-white" style="padding:4rem 0 0;">
   <div class="container">
     <div class="mosaic-grid">
-      <!-- Tall card: Fleet photos 2×2 grid -->
+      <!-- Tall card: Fleet showcase with new vehicle images -->
       <div class="img-card reveal-l" style="background:#060E1F;">
-        <div class="img-card-inner fleet-photo-grid" style="padding:0;overflow:hidden;">
-          <img src="{{ url_for('static', filename='images/geely1.jpg') }}" alt="Azhaljack Fleet">
-          <img src="{{ url_for('static', filename='images/geely2.png') }}" alt="Azhaljack Fleet">
-          <img src="{{ url_for('static', filename='images/geely3.jpg') }}" alt="Azhaljack Fleet">
-          <img src="{{ url_for('static', filename='images/cherry1.jpg') }}" alt="Azhaljack Fleet">
+        <div class="img-card-inner" style="padding:0;overflow:hidden;display:grid;grid-template-rows:58% 42%;gap:0;">
+          <img src="{{ url_for('static', filename='images/azhaljack_cars.png') }}" alt="Azhaljack Full Fleet" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:#030810;">
+            <img src="{{ url_for('static', filename='images/geely_gold.png') }}"  alt="Geely Gold"  style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+            <img src="{{ url_for('static', filename='images/geely_blue.png') }}"  alt="Geely Blue"  style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+            <img src="{{ url_for('static', filename='images/geely_gray.png') }}"  alt="Geely Gray"  style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+            <img src="{{ url_for('static', filename='images/cherry_white.png') }}" alt="Cherry White" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+          </div>
         </div>
         <div class="img-card-overlay">
           <div class="img-card-badge" data-i18n="a.c1.badge">Our Fleet</div>
@@ -300,7 +303,7 @@
         <p class="lang-ar" hidden style="color:var(--text-muted);font-size:.9rem;line-height:1.8;margin-bottom:1.5rem;">بدأنا بأسطول صغير وعزيمة هائلة، وبنينا عملياتنا من الصفر — بتجنيد أفضل المتخصصين اللوجستيين، والاستثمار في أحدث تقنيات التتبع، وبناء ثقافة تعتبر كل توصيلة مهمة.</p>
         <p class="lang-en" style="color:var(--text-muted);font-size:.9rem;line-height:1.8;margin-bottom:2rem;">Today, Azhaljack is more than a delivery company — we are Kuwait's logistics backbone. Our clients range from individual entrepreneurs to multinational corporations, and they all share one thing: the confidence that their deliveries are in the best hands in the country.</p>
         <p class="lang-ar" hidden style="color:var(--text-muted);font-size:.9rem;line-height:1.8;margin-bottom:2rem;">اليوم، أزهال جاك أكثر من مجرد شركة توصيل — نحن العمود الفقري اللوجستي للكويت. يتراوح عملاؤنا بين رواد الأعمال الأفراد والشركات متعددة الجنسيات، وجميعهم يشتركون في شيء واحد: الثقة بأن توصيلاتهم في أفضل الأيدي.</p>
-        <a href="{{ url_for('userroutes.contact') }}" class="btn-gold" data-i18n="btn.partner">Partner With Us</a>
+        <a href="{{ url_for('user.contact') }}" class="btn-gold" data-i18n="btn.partner">Partner With Us</a>
       </div>
       <div class="col-lg-6 reveal-r">
         <div class="row g-3">
@@ -395,7 +398,7 @@
     <h2 class="cta-title lang-ar" hidden>شارك مع الأفضل في الكويت.<br>عملك يستحق لا أقل من ذلك.</h2>
     <p class="cta-sub mb-4 lang-en">Let's build something great together. Get in touch and discover how Azhaljack can elevate your delivery experience.</p>
     <p class="cta-sub mb-4 lang-ar" hidden>لنبني شيئاً رائعاً معاً. تواصل معنا واكتشف كيف يمكن لأزهال جاك أن ترتقي بتجربة توصيلك.</p>
-    <a href="{{ url_for('userroutes.contact') }}" class="btn-dark" data-i18n="btn.conversation">Start a Conversation</a>
+    <a href="{{ url_for('user.contact') }}" class="btn-dark" data-i18n="btn.conversation">Start a Conversation</a>
   </div>
 </div>
 

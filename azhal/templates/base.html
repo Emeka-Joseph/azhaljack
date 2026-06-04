@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -21,7 +21,7 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="{{ url_for('userroutes.index') }}">
+    <a class="navbar-brand" href="{{ url_for('user.index') }}">
       <img src="{{ url_for('static', filename='images/logo.avif') }}" alt="Azhaljack Logo" class="brand-logo-img">
       <div class="brand-name">Azhaljack<span>Logistic Services · Kuwait</span></div>
     </a>
@@ -30,12 +30,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-        <li class="nav-item"><a class="nav-link" href="{{ url_for('userroutes.index') }}" data-i18n="nav.home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url_for('userroutes.about') }}" data-i18n="nav.about">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url_for('userroutes.services') }}" data-i18n="nav.services">Our Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url_for('userroutes.team') }}" data-i18n="nav.team">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url_for('userroutes.faq') }}" data-i18n="nav.faq">FAQ</a></li>
-        <li class="nav-item ms-lg-2"><a class="nav-link btn-nav" href="{{ url_for('userroutes.contact') }}" data-i18n="nav.contact">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('user.index') }}" data-i18n="nav.home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('user.about') }}" data-i18n="nav.about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('user.services') }}" data-i18n="nav.services">Our Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('user.team') }}" data-i18n="nav.team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('user.faq') }}" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item ms-lg-2"><a class="nav-link btn-nav" href="{{ url_for('user.contact') }}" data-i18n="nav.contact">Contact Us</a></li>
         <li class="nav-item ms-lg-2">
           <button id="langToggle" class="lang-toggle-btn" aria-label="Toggle language">
             <i class="bi bi-translate"></i>
@@ -57,7 +57,7 @@
   <div class="container">
     <div class="row g-5">
       <div class="col-lg-4">
-        <a class="navbar-brand mb-3 d-inline-flex" href="{{ url_for('userroutes.index') }}">
+        <a class="navbar-brand mb-3 d-inline-flex" href="{{ url_for('user.index') }}">
           <img src="{{ url_for('static', filename='images/logo.avif') }}" alt="Azhaljack Logo" class="brand-logo-img">
           <div class="brand-name ms-2">Azhaljack<span>Logistic Services · Kuwait</span></div>
         </a>
@@ -73,22 +73,22 @@
       <div class="col-lg-2 col-6">
         <h6 class="footer-heading" data-i18n="footer.col.company">Company</h6>
         <ul class="footer-links">
-          <li><a href="{{ url_for('userroutes.about') }}" data-i18n="footer.lnk.about">About Us</a></li>
-          <li><a href="{{ url_for('userroutes.team') }}" data-i18n="footer.lnk.team">Our Team</a></li>
-          <li><a href="{{ url_for('userroutes.services') }}" data-i18n="footer.lnk.services">Services</a></li>
-          <li><a href="{{ url_for('userroutes.faq') }}" data-i18n="footer.lnk.faq">FAQ</a></li>
-          <li><a href="{{ url_for('userroutes.contact') }}" data-i18n="footer.lnk.contact">Contact</a></li>
+          <li><a href="{{ url_for('user.about') }}" data-i18n="footer.lnk.about">About Us</a></li>
+          <li><a href="{{ url_for('user.team') }}" data-i18n="footer.lnk.team">Our Team</a></li>
+          <li><a href="{{ url_for('user.services') }}" data-i18n="footer.lnk.services">Services</a></li>
+          <li><a href="{{ url_for('user.faq') }}" data-i18n="footer.lnk.faq">FAQ</a></li>
+          <li><a href="{{ url_for('user.contact') }}" data-i18n="footer.lnk.contact">Contact</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-6">
         <h6 class="footer-heading" data-i18n="footer.col.services">Services</h6>
         <ul class="footer-links">
-          <li><a href="{{ url_for('userroutes.services') }}" data-i18n="footer.lnk.sameday">Same-Day Delivery</a></li>
-          <li><a href="{{ url_for('userroutes.services') }}" data-i18n="footer.lnk.express">Express Courier</a></li>
-          <li><a href="{{ url_for('userroutes.services') }}" data-i18n="footer.lnk.ecom">E-Commerce Fulfillment</a></li>
-          <li><a href="{{ url_for('userroutes.services') }}">Bulk Logistics</a></li>
-          <li><a href="{{ url_for('userroutes.services') }}" data-i18n="footer.lnk.corporate">Corporate Solutions</a></li>
-          <li><a href="{{ url_for('userroutes.services') }}" data-i18n="footer.lnk.cold">Cold-Chain Delivery</a></li>
+          <li><a href="{{ url_for('user.services') }}" data-i18n="footer.lnk.sameday">Same-Day Delivery</a></li>
+          <li><a href="{{ url_for('user.services') }}" data-i18n="footer.lnk.express">Express Courier</a></li>
+          <li><a href="{{ url_for('user.services') }}" data-i18n="footer.lnk.ecom">E-Commerce Fulfillment</a></li>
+          <li><a href="{{ url_for('user.services') }}">Bulk Logistics</a></li>
+          <li><a href="{{ url_for('user.services') }}" data-i18n="footer.lnk.corporate">Corporate Solutions</a></li>
+          <li><a href="{{ url_for('user.services') }}" data-i18n="footer.lnk.cold">Cold-Chain Delivery</a></li>
         </ul>
       </div>
       <div class="col-lg-3">

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+﻿{% extends 'base.html' %}
 {% block title %}FAQ — Azhaljack Logistic Services Kuwait{% endblock %}
 
 {% block content %}
@@ -8,7 +8,7 @@
     <div class="page-hero-inner">
       <div class="page-hero-text">
         <nav aria-label="breadcrumb"><ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{ url_for('userroutes.index') }}">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ url_for('user.index') }}">Home</a></li>
           <li class="breadcrumb-item active">FAQ</li>
         </ol></nav>
         <div class="section-badge" data-i18n="f.hero.badge">Got Questions?</div>
@@ -308,7 +308,7 @@
               <div class="cinfo-value">support@azhaljack.com</div>
             </div>
           </div>
-          <a href="{{ url_for('userroutes.contact') }}" class="btn-gold w-100 text-center d-block mt-2">Send a Message</a>
+          <a href="{{ url_for('user.contact') }}" class="btn-gold w-100 text-center d-block mt-2">Send a Message</a>
         </div>
       </div>
     </div>
@@ -320,7 +320,7 @@
   <div class="container text-center">
     <h2 class="cta-title">Ready to Experience Kuwait's Best Delivery?</h2>
     <p class="cta-sub mb-4">Sign up as a business client today — free account, no commitments, and your first delivery in under an hour.</p>
-    <a href="{{ url_for('userroutes.contact') }}" class="btn-dark">Open a Business Account</a>
+    <a href="{{ url_for('user.contact') }}" class="btn-dark">Open a Business Account</a>
   </div>
 </div>
 

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+﻿{% extends 'base.html' %}
 {% block title %}Azhaljack Logistic Services — Kuwait's #1 Delivery Company{% endblock %}
 
 {% block content %}
@@ -21,8 +21,8 @@
         <p class="hero-subtitle lang-en">From bustling Kuwait City souqs to quiet residential streets — Azhaljack Logistic Services reaches every door, every time. The State of Kuwait's most trusted consumer delivery company.</p>
         <p class="hero-subtitle lang-ar" hidden>من أسواق الكويت الصاخبة إلى الأحياء الهادئة — أزهال جاك تصل إلى كل باب، في كل وقت. شركة التوصيل الأكثر موثوقية في دولة الكويت.</p>
         <div class="hero-btns">
-          <a href="{{ url_for('userroutes.services') }}" class="btn-gold" data-i18n="btn.explore">Explore Our Services</a>
-          <a href="{{ url_for('userroutes.contact') }}" class="btn-outline-gold on-dark" data-i18n="btn.quote">Get a Quote</a>
+          <a href="{{ url_for('user.services') }}" class="btn-gold" data-i18n="btn.explore">Explore Our Services</a>
+          <a href="{{ url_for('user.contact') }}" class="btn-outline-gold on-dark" data-i18n="btn.quote">Get a Quote</a>
         </div>
         <div class="hero-stats">
           <div class="hero-stat">
@@ -42,32 +42,53 @@
         </div>
       </div>
       <div class="col-lg-6 hero-visual d-flex justify-content-center justify-content-lg-end mt-5 mt-lg-0">
-        <div class="position-relative">
-          <div class="hero-card">
-            <div class="hero-card-header">
-              <span class="hero-card-title">Live Delivery Tracker</span>
-              <span class="live-badge">● LIVE</span>
+        <div class="position-relative fleet-hero-wrap">
+
+          <!-- ── Fleet Image Slider ── -->
+          <div class="fleet-hero-slider">
+            <div class="fleet-hero-slide active">
+              <img src="{{ url_for('static', filename='images/azhaljack_cars.png') }}" alt="Azhaljack Full Fleet">
             </div>
-            <div class="route-block">
-              <div class="route-row"><div class="rdot s"></div><div><div class="rtxt">Salmiya Warehouse</div><div class="rsub">Origin · Kuwait City</div></div></div>
-              <div class="route-row"><div class="rline"></div></div>
-              <div class="route-row"><div class="rdot m"></div><div><div class="rtxt">In Transit — Hawalli</div><div class="rsub">ETA: 22 minutes</div></div></div>
-              <div class="route-row"><div class="rline"></div></div>
-              <div class="route-row"><div class="rdot e"></div><div><div class="rtxt">Customer — Jabriya</div><div class="rsub">Destination confirmed</div></div></div>
+            <div class="fleet-hero-slide">
+              <img src="{{ url_for('static', filename='images/geely_gold.png') }}" alt="Geely Gold">
             </div>
-            <div class="d-grid-3">
-              <div class="d-mini"><div class="d-mini-num">247</div><div class="d-mini-label">Active Today</div></div>
-              <div class="d-mini"><div class="d-mini-num">18m</div><div class="d-mini-label">Avg. Delivery</div></div>
-              <div class="d-mini"><div class="d-mini-num">100%</div><div class="d-mini-label">Coverage</div></div>
+            <div class="fleet-hero-slide">
+              <img src="{{ url_for('static', filename='images/geely_blue.png') }}" alt="Geely Blue">
+            </div>
+            <div class="fleet-hero-slide">
+              <img src="{{ url_for('static', filename='images/geely_gray.png') }}" alt="Geely Gray">
+            </div>
+            <div class="fleet-hero-slide">
+              <img src="{{ url_for('static', filename='images/cherry_white.png') }}" alt="Cherry White">
+            </div>
+
+            <!-- Caption overlay -->
+            <div class="fleet-hero-caption">
+              <div>
+                <div class="fleet-slide-name">Azhaljack Full Fleet</div>
+                <div class="fleet-slide-sub">200+ branded vehicles · Kuwait</div>
+              </div>
+              <span class="fleet-live-badge">● LIVE</span>
+            </div>
+
+            <!-- Navigation dots -->
+            <div class="fleet-hero-dots">
+              <button class="fleet-hero-dot active" data-idx="0" aria-label="Slide 1"></button>
+              <button class="fleet-hero-dot" data-idx="1" aria-label="Slide 2"></button>
+              <button class="fleet-hero-dot" data-idx="2" aria-label="Slide 3"></button>
+              <button class="fleet-hero-dot" data-idx="3" aria-label="Slide 4"></button>
+              <button class="fleet-hero-dot" data-idx="4" aria-label="Slide 5"></button>
             </div>
           </div>
+
+          <!-- Floating badge chips -->
           <div class="float-chip tl">
-            <div class="chip-icon"><i class="bi bi-shield-check-fill"></i></div>
-            <div><div class="chip-txt">Fully Insured</div><div class="chip-sub">Every Shipment</div></div>
+            <div class="chip-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <div><div class="chip-txt">GPS Tracked</div><div class="chip-sub">Every Vehicle</div></div>
           </div>
           <div class="float-chip br">
-            <div class="chip-icon"><i class="bi bi-star-fill"></i></div>
-            <div><div class="chip-txt">4.9 / 5.0 Rating</div><div class="chip-sub">12,400+ Reviews</div></div>
+            <div class="chip-icon"><i class="bi bi-shield-check-fill"></i></div>
+            <div><div class="chip-txt">Fully Insured</div><div class="chip-sub">Every Shipment</div></div>
           </div>
         </div>
       </div>
@@ -297,7 +318,7 @@
         <div class="feat"><div class="feat-icon"><i class="bi bi-lightning-charge-fill"></i></div><div><div class="feat-title lang-en">Unmatched Speed</div><div class="feat-title lang-ar" hidden>سرعة لا مثيل لها</div><div class="feat-text lang-en">Same-day and express delivery options across all six governorates of Kuwait — because your customers can't wait.</div><div class="feat-text lang-ar" hidden>خيارات توصيل في نفس اليوم وسريع عبر محافظات الكويت الست — لأن عملاءك لا يستطيعون الانتظار.</div></div></div>
         <div class="feat"><div class="feat-icon"><i class="bi bi-graph-up-arrow"></i></div><div><div class="feat-title lang-en">Scalable Operations</div><div class="feat-title lang-ar" hidden>عمليات قابلة للتوسع</div><div class="feat-text lang-en">Whether you're a boutique sending 10 packages or a corporation shipping 10,000 — our infrastructure scales seamlessly with your needs.</div><div class="feat-text lang-ar" hidden>سواء كنت متجراً صغيراً يرسل ١٠ طرود أو شركة تشحن ١٠,٠٠٠ — بنيتنا التحتية تتوسع بسلاسة مع احتياجاتك.</div></div></div>
         <div class="feat"><div class="feat-icon"><i class="bi bi-award-fill"></i></div><div><div class="feat-title lang-en">Kuwait's Best — By Every Measure</div><div class="feat-title lang-ar" hidden>الأفضل في الكويت — بكل المقاييس</div><div class="feat-text lang-en">Recognized by our clients, our industry peers, and our relentless track record. Not just a claim — a promise we honour every single day.</div><div class="feat-text lang-ar" hidden>معترف بنا من عملائنا وأقراننا في الصناعة وسجلنا الحافل. ليس مجرد ادعاء — بل وعد نفي به كل يوم.</div></div></div>
-        <a href="{{ url_for('userroutes.about') }}" class="btn-gold mt-2" data-i18n="btn.story">Our Full Story</a>
+        <a href="{{ url_for('user.about') }}" class="btn-gold mt-2" data-i18n="btn.story">Our Full Story</a>
       </div>
     </div>
   </div>
@@ -314,23 +335,23 @@
       <p class="section-subtitle lang-ar" hidden>من توصيل الميل الأخير إلى التنفيذ الكامل وتحويل الأعمال — كل خدمة مصممة بدقة للسوق الكويتي.</p>
     </div>
     <div class="row g-4">
-      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-lightning-charge-fill"></i></div><div class="svc-title" data-i18n="i.svc.1">Same-Day Delivery</div><p class="svc-text lang-en">Order and get your order(s) delivered same day across all Kuwait governorates. Our flagship service with a 99% on-time success rate.</p><p class="svc-text lang-ar" hidden>اطلب واستلم طلباتك في نفس اليوم عبر جميع محافظات الكويت. خدمتنا الرائدة بمعدل نجاح ٩٩٪ في الالتزام بالوقت.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
-      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-box-seam-fill"></i></div><div class="svc-title" data-i18n="i.svc.2">E-Commerce Fulfillment</div><p class="svc-text lang-en">End-to-end fulfillment for online stores — warehousing, pick-pack, last-mile delivery, and return management.</p><p class="svc-text lang-ar" hidden>تنفيذ شامل للمتاجر الإلكترونية — تخزين، تعبئة، توصيل لباب المنزل، وإدارة المرتجعات.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
-      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-truck-front-fill"></i></div><div class="svc-title" data-i18n="i.svc.3">Express Courier</div><p class="svc-text lang-en">Priority express pickup and delivery within minutes (depending on the distance).</p><p class="svc-text lang-ar" hidden>استلام وتوصيل سريع ذو أولوية خلال دقائق (بحسب المسافة).</p><a href="{{ url_for('userroutes.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
-      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-building-fill"></i></div><div class="svc-title" data-i18n="i.svc.4">Corporate Logistics</div><p class="svc-text lang-en">Bespoke logistics contracts for enterprises, government entities, and large-scale retail chains throughout Kuwait.</p><p class="svc-text lang-ar" hidden>عقود لوجستية مخصصة للشركات والجهات الحكومية وسلاسل التجزئة الكبرى في الكويت.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
-      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-snow"></i></div><div class="svc-title" data-i18n="i.svc.5">Cold-Chain Delivery</div><p class="svc-text lang-en">Temperature-controlled logistics for pharmaceuticals, gourmet foods, and any product that demands climate protection.</p><p class="svc-text lang-ar" hidden>لوجستيات بتحكم في درجة الحرارة للأدوية والأغذية الفاخرة وأي منتج يحتاج حماية مناخية.</p><a href="{{ url_for('userroutes.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-lightning-charge-fill"></i></div><div class="svc-title" data-i18n="i.svc.1">Same-Day Delivery</div><p class="svc-text lang-en">Order and get your order(s) delivered same day across all Kuwait governorates. Our flagship service with a 99% on-time success rate.</p><p class="svc-text lang-ar" hidden>اطلب واستلم طلباتك في نفس اليوم عبر جميع محافظات الكويت. خدمتنا الرائدة بمعدل نجاح ٩٩٪ في الالتزام بالوقت.</p><a href="{{ url_for('user.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-box-seam-fill"></i></div><div class="svc-title" data-i18n="i.svc.2">E-Commerce Fulfillment</div><p class="svc-text lang-en">End-to-end fulfillment for online stores — warehousing, pick-pack, last-mile delivery, and return management.</p><p class="svc-text lang-ar" hidden>تنفيذ شامل للمتاجر الإلكترونية — تخزين، تعبئة، توصيل لباب المنزل، وإدارة المرتجعات.</p><a href="{{ url_for('user.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-truck-front-fill"></i></div><div class="svc-title" data-i18n="i.svc.3">Express Courier</div><p class="svc-text lang-en">Priority express pickup and delivery within minutes (depending on the distance).</p><p class="svc-text lang-ar" hidden>استلام وتوصيل سريع ذو أولوية خلال دقائق (بحسب المسافة).</p><a href="{{ url_for('user.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-building-fill"></i></div><div class="svc-title" data-i18n="i.svc.4">Corporate Logistics</div><p class="svc-text lang-en">Bespoke logistics contracts for enterprises, government entities, and large-scale retail chains throughout Kuwait.</p><p class="svc-text lang-ar" hidden>عقود لوجستية مخصصة للشركات والجهات الحكومية وسلاسل التجزئة الكبرى في الكويت.</p><a href="{{ url_for('user.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      <div class="col-lg-4 col-md-6 reveal"><div class="svc-card"><div class="svc-icon"><i class="bi bi-snow"></i></div><div class="svc-title" data-i18n="i.svc.5">Cold-Chain Delivery</div><p class="svc-text lang-en">Temperature-controlled logistics for pharmaceuticals, gourmet foods, and any product that demands climate protection.</p><p class="svc-text lang-ar" hidden>لوجستيات بتحكم في درجة الحرارة للأدوية والأغذية الفاخرة وأي منتج يحتاج حماية مناخية.</p><a href="{{ url_for('user.services') }}" class="svc-link" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
       <div class="col-lg-4 col-md-6 reveal">
         <div class="svc-card" style="border-color:rgba(201,168,76,.3);background:linear-gradient(160deg,#fff 60%,rgba(201,168,76,.04) 100%);">
           <div class="svc-icon" style="background:var(--gradient-gold);border-color:transparent;"><i class="bi bi-graph-up-arrow" style="color:var(--sapphire);"></i></div>
           <div class="svc-title" data-i18n="i.svc.6">Business Consultation</div>
           <p class="svc-text lang-en">Strategy, setup, and revival for Kuwait businesses. We rescue struggling ventures, launch new ones, and build the frameworks that keep enterprises growing.</p>
           <p class="svc-text lang-ar" hidden>استراتيجية وتأسيس وإنعاش للأعمال الكويتية. ننقذ المشاريع المتعثرة، نطلق جديدة، ونبني أطراً تُبقي الشركات في نمو مستمر.</p>
-          <a href="{{ url_for('userroutes.services') }}#consultation" class="svc-link" style="color:var(--gold-dark);" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a>
+          <a href="{{ url_for('user.services') }}#consultation" class="svc-link" style="color:var(--gold-dark);" data-i18n="btn.learn">Learn More <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
     </div>
     <div class="text-center mt-5 reveal">
-      <a href="{{ url_for('userroutes.services') }}" class="btn-outline-gold" data-i18n="btn.all-svc">View All Services</a>
+      <a href="{{ url_for('user.services') }}" class="btn-outline-gold" data-i18n="btn.all-svc">View All Services</a>
     </div>
   </div>
 </section>
@@ -376,7 +397,7 @@
           <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name" data-i18n="i.gov.5">Jahra Governorate</div></div></div>
           <div class="col-6"><div class="gov-pill"><div class="gov-dot pulse"></div><div class="gov-name" data-i18n="i.gov.6">Mubarak Al-Kabeer</div></div></div>
         </div>
-        <a href="{{ url_for('userroutes.contact') }}" class="btn-gold" data-i18n="btn.nationwide">Start Delivering Nationwide</a>
+        <a href="{{ url_for('user.contact') }}" class="btn-gold" data-i18n="btn.nationwide">Start Delivering Nationwide</a>
       </div>
       <div class="col-lg-6 reveal-r d-flex justify-content-center">
         <div style="position:relative;width:100%;max-width:440px;">
@@ -468,6 +489,65 @@
   </div>
 </section>
 
+<!-- ══ PARTNERS ══ -->
+<div class="partners-strip">
+  <div class="container">
+    <div class="section-center mb-5 reveal">
+      <div class="section-badge" data-i18n="i.partners.badge">Trusted By</div>
+      <h2 class="section-title lang-en">Brands That Partner with <span class="gold-text">Azhaljack</span></h2>
+      <h2 class="section-title lang-ar" hidden>علامات تجارية تشارك <span class="gold-text">أزهال جاك</span></h2>
+      <p class="section-subtitle lang-en">Kuwait's most recognised restaurants and platforms rely on Azhaljack to deliver their promise — on time, every time.</p>
+      <p class="section-subtitle lang-ar" hidden>تعتمد أبرز المطاعم والمنصات في الكويت على أزهال جاك لإيصال وعدها — في الوقت المحدد، في كل مرة.</p>
+    </div>
+  </div>
+  <div class="partners-track-outer">
+    <div class="partners-track">
+      <!-- Set 1 -->
+      <div class="partner-card" style="border-color:rgba(255,61,0,.2);">
+        <img src="{{ url_for('static', filename='images/keeta.png') }}" alt="Keeta" class="partner-logo-img">
+        <span class="partner-label">Keeta</span>
+      </div>
+      <div class="partner-card" style="border-color:rgba(0,163,92,.2);">
+        <img src="{{ url_for('static', filename='images/jahes.png') }}" alt="Jahez" class="partner-logo-img">
+        <span class="partner-label">Jahez</span>
+      </div>
+      <div class="partner-card" style="border-color:rgba(255,90,0,.2);">
+        <img src="{{ url_for('static', filename='images/talabat.png') }}" alt="Talabat" class="partner-logo-img">
+        <span class="partner-label">Talabat</span>
+      </div>
+      <div class="partner-card" style="border-color:rgba(198,24,11,.2);">
+        <img src="{{ url_for('static', filename='images/burger_king.png') }}" alt="Burger King" class="partner-logo-img">
+        <span class="partner-label">Burger King</span>
+      </div>
+      <div class="partner-card" style="border-color:rgba(15,95,185,.2);">
+        <img src="{{ url_for('static', filename='images/wasel.jpg') }}" alt="Wasel" class="partner-logo-img">
+        <span class="partner-label">Wasel</span>
+      </div>
+      <!-- Set 2 — duplicate for seamless infinite loop -->
+      <div class="partner-card" style="border-color:rgba(255,61,0,.2);">
+        <img src="{{ url_for('static', filename='images/keeta.png') }}" alt="Keeta" class="partner-logo-img">
+        <span class="partner-label">Keeta</span>
+      </div>
+      <div class="partner-card" style="border-color:rgba(0,163,92,.2);">
+        <img src="{{ url_for('static', filename='images/jahes.png') }}" alt="Jahez" class="partner-logo-img">
+        <span class="partner-label">Jahez</span>
+      </div>
+      <div class="partner-card" style="border-color:rgba(255,90,0,.2);">
+        <img src="{{ url_for('static', filename='images/talabat.png') }}" alt="Talabat" class="partner-logo-img">
+        <span class="partner-label">Talabat</span>
+      </div>
+      <div class="partner-card" style="border-color:rgba(198,24,11,.2);">
+        <img src="{{ url_for('static', filename='images/burger_king.png') }}" alt="Burger King" class="partner-logo-img">
+        <span class="partner-label">Burger King</span>
+      </div>
+      <div class="partner-card" style="border-color:rgba(15,95,185,.2);">
+        <img src="{{ url_for('static', filename='images/wasel.jpg') }}" alt="Wasel" class="partner-logo-img">
+        <span class="partner-label">Wasel</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ══ CTA BAND ══ -->
 <div class="cta-section">
   <div class="container">
@@ -480,11 +560,43 @@
         <p class="cta-sub lang-ar" hidden>انضم إلى أكثر من ٥,٠٠٠ شركة تثق بأزهال جاك. احصل على عرض أسعارك الأول في أقل من ٦٠ ثانية.</p>
       </div>
       <div class="col-lg-4 text-lg-end d-flex flex-column gap-3 align-items-lg-end reveal-r">
-        <a href="{{ url_for('userroutes.contact') }}" class="btn-dark" data-i18n="btn.free-quote">Get a Free Quote</a>
+        <a href="{{ url_for('user.contact') }}" class="btn-dark" data-i18n="btn.free-quote">Get a Free Quote</a>
         <a href="tel:+96596600674" class="btn-dark"><i class="bi bi-telephone-fill me-2"></i><span data-i18n="btn.call">Call Now</span></a>
       </div>
     </div>
   </div>
 </div>
+
+{% block extra_js %}
+<script>
+(function(){
+  const slides = document.querySelectorAll('.fleet-hero-slide');
+  const dots   = document.querySelectorAll('.fleet-hero-dot');
+  const nameEl = document.querySelector('.fleet-slide-name');
+  const subEl  = document.querySelector('.fleet-slide-sub');
+  if (!slides.length) return;
+  const data = [
+    ['Azhaljack Full Fleet',    '200+ branded vehicles · Kuwait'],
+    ['Geely Gold Edition',      'Premium delivery · GPS tracked'],
+    ['Geely Blue Series',       'Urban courier · All governorates'],
+    ['Geely Gray — Workhorse',  'Bulk logistics · Kuwait-wide'],
+    ['Cherry White Delivery',   'Cold-chain & express capable'],
+  ];
+  let cur = 0, timer;
+  function goTo(idx) {
+    slides[cur].classList.remove('active'); dots[cur].classList.remove('active');
+    cur = idx;
+    slides[cur].classList.add('active'); dots[cur].classList.add('active');
+    if (nameEl) nameEl.textContent = data[cur][0];
+    if (subEl)  subEl.textContent  = data[cur][1];
+  }
+  dots.forEach(function(d, i) {
+    d.addEventListener('click', function() { clearInterval(timer); goTo(i); timer = setInterval(next, 4000); });
+  });
+  function next() { goTo((cur + 1) % slides.length); }
+  timer = setInterval(next, 4000);
+})();
+</script>
+{% endblock %}
 
 {% endblock %}
