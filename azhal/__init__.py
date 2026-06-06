@@ -4,10 +4,12 @@ import os
 
 load_dotenv()
 
-def create_app():
+def create_app(config_name=None):
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key')
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///azhaljack.db')
+
+    from azhal.config import config
+    cfg = config_name or os.environ.get('FLASK_ENV', 'default')
+    app.config.from_object(config[cfg])
 
     from azhal.userroutes import user
     app.register_blueprint(user)
